@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       <NavBar />
 
       <div className="mx-auto max-w-[40%]">
-        <div className="text-2xl font-bold text-slate-700">
+        <div className="text-2xl font-bold">
           About
         </div>
         <ul role="list" className="mx-8 my-4 marker:text-teal-500 list-disc">

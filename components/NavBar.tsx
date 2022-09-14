@@ -25,6 +25,7 @@ function NavBar() {
       </Typography>
     </ul>
   );
+
   return (
     <Navbar className="mx-auto max-w-[40%] mb-8 py-2 lg:py-4">
       <div className="container mx-auto flex items-center justify-between text-teal-gray-900">
