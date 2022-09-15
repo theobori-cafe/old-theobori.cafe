@@ -13,20 +13,13 @@ const ContactPage = () => {
           Contact
         </div>
         <ul role="list" className="mx-8 my-4 marker:text-teal-500 list-disc">
+    
           <li>
-          <a className="mr-1">
-              <Image 
-                src="https://images.emojiterra.com/google/android-pie/512px/2709.png"
-                alt="enveloppe"
-                width="20px"
-                height="20px"
-                loader={imageLoader}
-                unoptimized
-                >
-              </Image>
+            <a href="mailto:theo1.bori@epitech.eu" className="text-teal-500 hover:underline">
+              theo1.bori@epitech.eu
             </a>
-            theo1.bori@epitech.eu
           </li>
+
           <li>
             <a className="mr-1">
               <Image 
@@ -41,6 +34,7 @@ const ContactPage = () => {
             </a>
             b0th#6474
           </li>
+    
         </ul>
       </div>
 

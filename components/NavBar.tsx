@@ -1,4 +1,5 @@
 import { Navbar, Typography } from "@material-tailwind/react";
+import Link from "next/link";
 
 function NavBar() {
   const navList = (
@@ -9,19 +10,24 @@ function NavBar() {
         color="blue-gray"
         className="p-1"
       >
-        <a href="/blog" className="flex items-center text-slate-500 hover:decoration-teal-500 hover:underline">
-          Blog
-        </a>
+        <Link href="/posts">
+          <a className="flex items-center text-slate-500 hover:decoration-teal-500 hover:underline">
+            Posts
+          </a>
+        </Link>
       </Typography>
+
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
         className="p-1"
       >
-        <a href="/contact" className="flex items-center text-slate-500 hover:decoration-teal-500 hover:underline">
-          Contact
-        </a>
+        <Link href="/contact">
+          <a className="flex items-center text-slate-500 hover:decoration-teal-500 hover:underline">
+            Contact
+          </a>
+        </Link>
       </Typography>
     </ul>
   );

@@ -4,5 +4,5 @@
 
 html {
   font-size: 20px;
-  @apply text-gray-800;
+  font-family: 'Helvetica Neue', sans-serif;
 }
