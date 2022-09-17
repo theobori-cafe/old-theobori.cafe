@@ -1,7 +1,8 @@
 import { Navbar, Typography } from "@material-tailwind/react";
 import Link from "next/link";
+import { FunctionComponent } from "react";
 
-function NavBar() {
+const NavBar: FunctionComponent = () => {
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
@@ -47,6 +48,6 @@ function NavBar() {
       </div>
     </Navbar>
   );
-}
+};
 
 export default NavBar;

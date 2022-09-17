@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 
 import NavBar from '../components/NavBar';
+import Card from '../components/project/Card';
 import imageLoader from '../imageLoader';
 
 const Home: NextPage = () => {
@@ -57,10 +58,22 @@ const Home: NextPage = () => {
             LinkedIn
             </a>
           </li>
+        </ul>
+
+        <div className="text-2xl font-bold">
+          Some Open Source projects
+        </div>
+        <ul role="list" className="mx-8 my-4 marker:text-teal-500 list-disc">
+          <li>
+            <Card langage='Rust'/>
+          </li>
+          <li>
+          <Card langage='Python'/>
+          </li>
 
         </ul>
+  
       </div>
-
 
     </div>
   );
