@@ -11,6 +11,19 @@ const NavBar: FunctionComponent = () => {
         color="blue-gray"
         className="p-1"
       >
+        <Link href="/pgp">
+          <a className="flex items-center text-slate-500 hover:decoration-teal-500 hover:underline">
+            PGP
+          </a>
+        </Link>
+      </Typography>
+
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1"
+      >
         <Link href="/posts">
           <a className="flex items-center text-slate-500 hover:decoration-teal-500 hover:underline">
             Posts

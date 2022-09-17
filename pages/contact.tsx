@@ -1,9 +1,10 @@
+import { NextPage } from "next";
 import Image from "next/image";
 
 import NavBar from "../components/NavBar";
 import imageLoader from "../imageLoader";
 
-const ContactPage = () => {
+const ContactPage: NextPage = () => {
   return (
     <div>
       <NavBar />

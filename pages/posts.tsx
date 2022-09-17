@@ -1,16 +1,21 @@
+import fs from "fs";
+import matter from "gray-matter";
+import type { NextPage } from 'next';
+
 import NavBar from "../components/NavBar";
 import PostPreview from "../components/PostPreview";
 import { Frontmatter } from "../components/PostPreview";
-
-import fs from "fs";
-import matter from "gray-matter";
 
 type Post = {
   slug: string,
   frontmatter: Frontmatter
 };
 
-const PostsPage = ({ posts }: { posts: Post[] }) => {
+type Props = {
+  posts: Post[];
+};
+
+const PostsPage: NextPage<Props> = ({ posts }: { posts: Post[] }) => {
   return (
     <div>
       <NavBar />
