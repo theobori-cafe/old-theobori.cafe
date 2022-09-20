@@ -67,7 +67,7 @@ const PostPage: NextPage<Props> = ({ content, frontmatter }) => {
 
       <div className="mx-auto max-w-[40%]">
 
-        <div className="text-2xl font-bold text-teal-500">
+        <div className="text-2xl font-bold text-blue-500">
           {frontmatter.title}
         </div>
 
@@ -112,11 +112,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const { slug } = context.params as IParams;
 
   const postPath = path.join("content/posts", `${slug}.md`);
-  const posts = fs
+  const post = fs
     .readFileSync(postPath)
     .toString();
 
-  const { data, content } = matter(posts);
+  const { data, content } = matter(post);
   const frontmatter = {
     ...data,
     date: new Date().toLocaleDateString(

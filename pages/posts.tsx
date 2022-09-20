@@ -45,7 +45,6 @@ export const getStaticProps: GetStaticProps = async () => {
       .toString();
     
     const { data } = matter(content);
-
     // Formatting current date
     const frontmatter = {
       ...data,

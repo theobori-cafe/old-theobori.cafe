@@ -20,7 +20,7 @@ const About: FunctionComponent = () => {
           Love Linux, Rust & Python
         </li>
         <li>
-          Maintaining <a href="https://skins.tw" className="text-teal-500 hover:underline">skins.tw</a>
+          Maintaining <a href="https://skins.tw" className="text-blue-500 hover:underline underline-offset-4">skins.tw</a>
         </li>
       </ul>
     </div>
@@ -30,19 +30,19 @@ const About: FunctionComponent = () => {
 const Profiles: FunctionComponent = () => {
   return (
     <div>
-      <ul role="list" className="my-4 marker:text-teal-500 list-disc">
+      <ul role="list" className="my-4 marker:text-blue-500 list-disc">
         <li>
-          <a href="https://www.github.com/theobori" className="text-teal-500 hover:underline">
+          <a href="https://www.github.com/theobori" className="text-blue-500 hover:underline underline-offset-4">
           GitHub
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/theo-bori/" className="text-teal-500 hover:underline">
+          <a href="https://www.linkedin.com/in/theo-bori/" className="text-blue-500 hover:underline underline-offset-4">
           LinkedIn
           </a>
         </li>
         <li>
-          <a href="https://ctftime.org/user/67138/" className="text-teal-500 hover:underline">
+          <a href="https://ctftime.org/user/67138/" className="text-blue-500 hover:underline underline-offset-4">
           CTFtime
           </a>
         </li>
@@ -106,7 +106,7 @@ type Props = {
 const Projects: FunctionComponent<Props> = ({ projects }) => {
   return (
     <div>
-      <ul role="list" className="my-4 marker:text-teal-500 list-disc">
+      <ul role="list" className="my-4 marker:text-blue-500 list-disc">
         {
           projects.map(({ name, description, url}) => {
             return (

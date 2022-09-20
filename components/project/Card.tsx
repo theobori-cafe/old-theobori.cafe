@@ -18,7 +18,7 @@ const Card: FunctionComponent<Props> = ({ name, description, url }) => {
     <div>
 
       <header className="">
-        <a href={projectUrl} className="text-teal-500 hover:underline">
+        <a href={projectUrl} className="text-blue-500 hover:underline underline-offset-4">
           {name}
         </a>
       </header>

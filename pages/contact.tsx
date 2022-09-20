@@ -15,10 +15,10 @@ const ContactPage: NextPage = () => {
         <div className="text-2xl font-bold">
           Contact
         </div>
-        <ul role="list" className="my-4 marker:text-teal-500 list-disc">
+        <ul role="list" className="my-4 marker:text-blue-500 list-disc">
     
           <li>
-            <a href={`mailto:${MAIL_ADDRESS}`} className="text-teal-500 hover:underline">
+            <a href={`mailto:${MAIL_ADDRESS}`} className="text-blue-500 hover:underline underline-offset-4">
               {MAIL_ADDRESS}
             </a>
           </li>
