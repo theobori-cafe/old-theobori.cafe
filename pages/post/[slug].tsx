@@ -6,15 +6,61 @@ import ReactMarkdown from "react-markdown";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
 
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { Frontmatter } from "../../components/PostPreview";
 import NavBar from "../../components/NavBar";
+
+import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
+import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
+import typescript from "react-syntax-highlighter/dist/cjs/languages/prism/typescript";
+import scss from "react-syntax-highlighter/dist/cjs/languages/prism/scss";
+import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
+import markdown from "react-syntax-highlighter/dist/cjs/languages/prism/markdown";
+import json from "react-syntax-highlighter/dist/cjs/languages/prism/json";
+
+import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+
+SyntaxHighlighter.registerLanguage("tsx", tsx);
+SyntaxHighlighter.registerLanguage("jsx", jsx);
+SyntaxHighlighter.registerLanguage("typescript", typescript);
+SyntaxHighlighter.registerLanguage("scss", scss);
+SyntaxHighlighter.registerLanguage("bash", bash);
+SyntaxHighlighter.registerLanguage("markdown", markdown);
+SyntaxHighlighter.registerLanguage("json", json);
 
 type Props = {
   content: string,
   frontmatter: Frontmatter
 };
 
-const Post: NextPage<Props> = ({ content, frontmatter }) => {
+const markdownComponents: object = {
+  code({ node, inline, className, children, ...props } :
+    { node: any, inline: any, className: any, children: any }
+  ) {
+    const match = /language-(\w+)/.exec(className || "");
+
+    if ((!inline && match) === false) {
+      return (
+        <code className={className ? className : ""} {...props}>
+          {children}
+        </code>
+      );
+    }
+
+    return (
+      <SyntaxHighlighter
+        style={materialDark}
+        PreTag="div"
+        language={match ? match[1] : "bash"}
+        // eslint-disable-next-line react/no-children-prop
+        children={String(children).replace(/\n$/, "")}
+        {...props}
+      />
+    );
+  }
+};
+
+const PostPage: NextPage<Props> = ({ content, frontmatter }) => {
   return (
     <article>
       <NavBar />
@@ -29,7 +75,10 @@ const Post: NextPage<Props> = ({ content, frontmatter }) => {
           {frontmatter.date}
         </div>
     
-        <ReactMarkdown>
+        <ReactMarkdown 
+          components={markdownComponents}
+          className="text-xs"
+        >
           {content}
         </ReactMarkdown>
       </div>
@@ -50,7 +99,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   
   return {
     paths,
-    fallback: true
+    fallback: false
   };
 };
 
@@ -88,4 +137,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-export default Post;
+export default PostPage;

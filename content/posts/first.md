@@ -10,13 +10,10 @@ updatedAt: "2020-04-16"
 
 Normal text
 
-\`\`\`jsx
-
+```jsx
 import React from "react";
-
 const CoolComponent = () => <div>I'm a cool component!!</div>;
-
 export default CoolComponent;
-\`\`\`
+```
 
 ![Van Gogh](/van_gogh.jpg)
