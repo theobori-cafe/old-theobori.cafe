@@ -1,10 +1,10 @@
-import type { NextPage } from 'next';
-import Image from 'next/image';
-import Head from 'next/head';
+import type { NextPage } from "next";
+import Image from "next/image";
+import Head from "next/head";
 
-import NavBar from '../components/NavBar';
-import Card from '../components/project/Card';
-import imageLoader from '../imageLoader';
+import NavBar from "../components/NavBar";
+import Card from "../components/project/Card";
+import imageLoader from "../imageLoader";
 
 const Home: NextPage = () => {
   return (
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <div className="text-2xl font-bold">
           About
         </div>
-        <ul role="list" className="mx-8 my-4 marker:text-teal-500 list-disc">
+        <ul role="list" className="my-4 marker:text-teal-500 list-disc">
           <li>
             EPITECH student
           </li>
@@ -47,7 +47,7 @@ const Home: NextPage = () => {
         <div className="text-2xl font-bold">
           Profiles
         </div>
-        <ul role="list" className="mx-8 my-4 marker:text-teal-500 list-disc">
+        <ul role="list" className="my-4 marker:text-teal-500 list-disc">
           <li>
             <a href="https://www.github.com/theobori" className="text-teal-500 hover:underline">
             GitHub
@@ -63,12 +63,13 @@ const Home: NextPage = () => {
         <div className="text-2xl font-bold">
           Some Open Source projects
         </div>
-        <ul role="list" className="mx-8 my-4 marker:text-teal-500 list-disc">
+        <ul role="list" className="my-4 marker:text-teal-500 list-disc">
           <li>
-            <Card langage='Rust'/>
+            <Card langage="Project card 1"/>
           </li>
+
           <li>
-          <Card langage='Python'/>
+            <Card langage="Project card 2"/>
           </li>
 
         </ul>

@@ -3,12 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [
-      "rickandmortyapi.com"
-    ],
+    domains: [],
     loader: "custom",
     path: "/"
-  }
+  },
+  output: 'standalone'
 }
 
 module.exports = nextConfig

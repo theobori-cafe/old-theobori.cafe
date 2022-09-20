@@ -13,7 +13,7 @@ const ContactPage: NextPage = () => {
         <div className="text-2xl font-bold">
           Contact
         </div>
-        <ul role="list" className="mx-8 my-4 marker:text-teal-500 list-disc">
+        <ul role="list" className="my-4 marker:text-teal-500 list-disc">
     
           <li>
             <a href="mailto:theo1.bori@epitech.eu" className="text-teal-500 hover:underline">

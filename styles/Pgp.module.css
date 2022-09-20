@@ -1,0 +1,8 @@
+.code {
+  background: #dbdbdb;
+  border-radius: 5px;
+  padding: 0.25rem;
+  font-size: 1.0rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}

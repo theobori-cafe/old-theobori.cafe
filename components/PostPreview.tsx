@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FunctionComponent } from "react";
 
 export type Frontmatter = {
@@ -6,17 +7,28 @@ export type Frontmatter = {
     date: string
 };
 
-type Props = Frontmatter;
+type Props = {
+  frontmatter: Frontmatter,
+  slug: string
+};
 
-const PostPreview: FunctionComponent<Props> = ({ title, description, date }) => {
+const PostPreview: FunctionComponent<Props> = ({ frontmatter, slug }) => {
   return (
-    <article>
+    <article key={slug}>
       <header>
-        <h2 className="font-bold text-teal-500">{title}</h2>
-        <span className="text-sm italic">{date}</span>
+        <Link href={"/post/[slug]"} as={`/post/${slug}`}>
+          <a className="text-2xl font-bold text-teal-500 hover:underline">
+            {frontmatter.title}
+          </a>
+        </Link>
+  
+        <div className="text-sm italic">
+          {frontmatter.date}
+        </div>
       </header>
+  
       <section>
-        <p>{description}</p>
+        <p>{frontmatter.description}</p>
       </section>
     </article>
   );
