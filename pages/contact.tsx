@@ -1,8 +1,10 @@
 import { NextPage } from "next";
-import Image from "next/image";
 
 import NavBar from "../components/NavBar";
-import imageLoader from "../imageLoader";
+
+import styles from "../styles/Pgp.module.css";
+
+const MAIL_ADDRESS = "theo1.bori@epitech.eu";
 
 const ContactPage: NextPage = () => {
   return (
@@ -16,24 +18,16 @@ const ContactPage: NextPage = () => {
         <ul role="list" className="my-4 marker:text-teal-500 list-disc">
     
           <li>
-            <a href="mailto:theo1.bori@epitech.eu" className="text-teal-500 hover:underline">
-              theo1.bori@epitech.eu
+            <a href={`mailto:${MAIL_ADDRESS}`} className="text-teal-500 hover:underline">
+              {MAIL_ADDRESS}
             </a>
           </li>
 
-          <li>
-            <a className="mr-1">
-              <Image 
-                src="https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Discord_Logo_sans_texte.svg/1818px-Discord_Logo_sans_texte.svg.png"
-                alt="discord"
-                width="20px"
-                height="20px"
-                loader={imageLoader}
-                unoptimized
-                >
-              </Image>
-            </a>
-            b0th#6474
+          <li className="marker:text-slate-900">
+            Discord: 
+            <code className={styles.code}>
+              b0th#6474
+            </code>
           </li>
     
         </ul>

@@ -1,10 +1,129 @@
 import type { NextPage } from "next";
-import Image from "next/image";
 import Head from "next/head";
+import { FunctionComponent } from "react";
 
 import NavBar from "../components/NavBar";
 import Card from "../components/project/Card";
-import imageLoader from "../imageLoader";
+import { Project } from "../components/project/Card";
+
+const About: FunctionComponent = () => {
+  return (
+    <div>
+      <ul role="list" className="my-4 list-disc">
+        <li>
+          Open source enthoutiast
+        </li>
+        <li>
+          ex CTF player
+        </li>
+        <li>
+          Love Linux, Rust & Python
+        </li>
+        <li>
+          Maintaining <a href="https://skins.tw" className="text-teal-500 hover:underline">skins.tw</a>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+const Profiles: FunctionComponent = () => {
+  return (
+    <div>
+      <ul role="list" className="my-4 marker:text-teal-500 list-disc">
+        <li>
+          <a href="https://www.github.com/theobori" className="text-teal-500 hover:underline">
+          GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/theo-bori/" className="text-teal-500 hover:underline">
+          LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://ctftime.org/user/67138/" className="text-teal-500 hover:underline">
+          CTFtime
+          </a>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+const PROJECTS = [
+  {
+    name: "NES Utilities",
+    description: "Some utilities for the NES like disassembling, extracting CHR ROM graphics data, decoding Game Genie, etc..) in Rust",
+    url: "https://github.com/theobori/nes-utils"
+  },
+  {
+    name: "JackOS",
+    description: "An experimental operating system",
+    url: "https://github.com/theobori/JackOS"
+  },
+  {
+    name: "Teeworlds utilities",
+    description: "Teeworlds useful stuff like a renderer, asset merging, scenes system, etc..",
+    url: "https://github.com/teeworlds-utilities"
+  },
+  {
+    name: "libasm",
+    description: "An x86 assembly library that implement some C functions",
+    url: "https://github.com/theobori/libasm"
+  },
+  {
+    name: "turtle-svg",
+    description: "A Rust headless version of the turtle graphics library that generate SVG",
+    url: "https://github.com/theobori/turtle-svg"
+  },
+  {
+    name: "RSA.jl",
+    description: "Ported the RSA in Julia",
+    url: "https://github.com/theobori/RSA.jl"
+  },
+  {
+    name: "bot-template",
+    description: "A Discord bot template for Python",
+    url: "https://github.com/theobori/bot-template"
+  },
+  {
+    name: "lindenmayer",
+    description: "Rust L-System library with multiple graphic API that generate a SVG",
+    url: "https://github.com/theobori/lindermayer"
+  },
+  {
+    name: "More projects",
+    description: "",
+    url: ""
+  }
+];
+
+type Props = {
+  projects: Project[]
+}
+
+const Projects: FunctionComponent<Props> = ({ projects }) => {
+  return (
+    <div>
+      <ul role="list" className="my-4 marker:text-teal-500 list-disc">
+        {
+          projects.map(({ name, description, url}) => {
+            return (
+              <li key={name}>
+                <Card
+                  name={name}
+                  description={description}
+                  url={url}
+                />
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  );
+};
 
 const Home: NextPage = () => {
   return (
@@ -18,61 +137,21 @@ const Home: NextPage = () => {
       <NavBar />
 
       <div className="mx-auto max-w-[40%]">
-        <div className="text-2xl font-bold">
-          About
+
+        <div id="about" className="text-2xl font-bold">
+          💬 About
         </div>
-        <ul role="list" className="my-4 marker:text-teal-500 list-disc">
-          <li>
-            EPITECH student
-          </li>
-          <li>
-            Open source enthoutiast
-          </li>
-          <li>
-            <a className="mr-1">
-              <Image 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Emoji_u2665.svg/1024px-Emoji_u2665.svg.png"
-                alt="heart"
-                width="20px"
-                height="20px"
-                loader={imageLoader}
-                unoptimized
-                >
-              </Image>
-            </a>
-            Rust
-          </li>
-        </ul>
+        <About />
 
-        <div className="text-2xl font-bold">
-          Profiles
+        <div id="profiles" className="text-2xl font-bold">
+          🔗 Profiles
         </div>
-        <ul role="list" className="my-4 marker:text-teal-500 list-disc">
-          <li>
-            <a href="https://www.github.com/theobori" className="text-teal-500 hover:underline">
-            GitHub
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/theo-bori/" className="text-teal-500 hover:underline">
-            LinkedIn
-            </a>
-          </li>
-        </ul>
+        <Profiles />
 
-        <div className="text-2xl font-bold">
-          Some Open Source projects
+        <div id="open-source" className="text-2xl font-bold">
+          ⭐️ Open Source projects
         </div>
-        <ul role="list" className="my-4 marker:text-teal-500 list-disc">
-          <li>
-            <Card langage="Project card 1"/>
-          </li>
-
-          <li>
-            <Card langage="Project card 2"/>
-          </li>
-
-        </ul>
+        <Projects projects={PROJECTS} /> 
   
       </div>
 

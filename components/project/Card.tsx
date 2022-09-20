@@ -1,12 +1,33 @@
 import { FunctionComponent } from "react";
 
-type Props = {
-  langage: string
+export type Project = {
+  name: string,
+  description?: string,
+  url?: string
 };
 
-const Card: FunctionComponent<Props> = ({ langage }) => {
+type Props = Project;
+
+const DEFAULT_PROJECT_URL = "https://github.com/theobori";
+
+const Card: FunctionComponent<Props> = ({ name, description, url }) => {
+  
+  const projectUrl = url || DEFAULT_PROJECT_URL;
+
   return (
-    <div>{langage}</div>
+    <div>
+
+      <header className="">
+        <a href={projectUrl} className="text-teal-500 hover:underline">
+          {name}
+        </a>
+      </header>
+
+      <div className="text-sm italic">
+        {description}
+      </div>
+
+    </div>
   );
 };
 
