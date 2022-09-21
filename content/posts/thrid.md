@@ -1,8 +1,8 @@
 ---
-title: Second post
+title: third
 description: The second post is the least memorable.
 updatedAt: "2020-07-22"
-categories: ["Python", "Rust"]
+categories: ["Rust"]
 author: "second_theo"
 ---
 

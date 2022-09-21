@@ -4,11 +4,11 @@ import type { GetStaticProps, NextPage } from "next";
 
 import NavBar from "../components/NavBar";
 import PostPreview from "../components/PostPreview";
-import { Frontmatter } from "../components/PostPreview";
+import { PostMetadata } from "../lib/post";
 
 type Post = {
   slug: string,
-  frontmatter: Frontmatter
+  frontmatter: PostMetadata
 };
 
 type Props = {
@@ -45,22 +45,10 @@ export const getStaticProps: GetStaticProps = async () => {
       .toString();
     
     const { data } = matter(content);
-    // Formatting current date
-    const frontmatter = {
-      ...data,
-      date: new Date().toLocaleDateString(
-        "en-US",
-        { 
-          year: "numeric",
-          month: "long",
-          day: "numeric"
-        }
-      )
-    };
 
     return {
       slug: filename.replace(".md", ""),
-      frontmatter,
+      frontmatter: data,
     };
   });
 

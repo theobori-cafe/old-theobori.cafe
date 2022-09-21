@@ -12,6 +12,7 @@
     "@material-tailwind/react": "^1.2.4",
     "@types/react-syntax-highlighter": "^15.5.5",
     "@types/typography": "^0.16.4",
+    "feed": "^4.2.2",
     "next": "12.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

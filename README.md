@@ -1,5 +1,9 @@
 # website
 
+## About
+
+Personal website + blog
+
 ## How to build and run ?
 
 1. Get a node environment

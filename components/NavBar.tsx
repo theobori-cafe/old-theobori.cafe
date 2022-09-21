@@ -25,7 +25,7 @@ const NAV_ITEMS = [
     name: "Posts"
   },
   {
-    href: "/",
+    href: "/rss/feed.xml",
     name: "RSS"
   },
   {
@@ -60,12 +60,11 @@ const NavBar: FunctionComponent = () => {
           as="a"
           href="/"
           variant="small"
-          className="mr-4 py-1.5 text-2xl font-medium"
+          className="mr-4 py-1.5 text-2xl font-medium text-slate-500"
         >
-          <span className="text-slate-500">Théo Bori</span>
+          <span>Théo Bori</span>
         </Typography>
         <NavItems items={NAV_ITEMS} />
-        {/* <div className="hidden lg:block">{navList}</div> */}
       </div>
     </Navbar>
   );

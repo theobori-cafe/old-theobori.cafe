@@ -5,10 +5,10 @@ import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
-
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import { Frontmatter } from "../../components/PostPreview";
+
 import NavBar from "../../components/NavBar";
+import { PostMetadata } from "../../lib/post";
 
 import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
 import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
@@ -30,11 +30,11 @@ SyntaxHighlighter.registerLanguage("json", json);
 
 type Props = {
   content: string,
-  frontmatter: Frontmatter
+  frontmatter: PostMetadata
 };
 
 const markdownComponents: object = {
-  code({ node, inline, className, children, ...props } :
+  code({ node, inline, className, children, ...props }:
     { node: any, inline: any, className: any, children: any }
   ) {
     const match = /language-(\w+)/.exec(className || "");
@@ -71,8 +71,8 @@ const PostPage: NextPage<Props> = ({ content, frontmatter }) => {
           {frontmatter.title}
         </div>
 
-        <div className="text-sm italic">
-          {frontmatter.date}
+        <div className="text-sm italic text-slate-500">
+          {frontmatter.updatedAt}
         </div>
     
         <ReactMarkdown 
@@ -117,22 +117,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
     .toString();
 
   const { data, content } = matter(post);
-  const frontmatter = {
-    ...data,
-    date: new Date().toLocaleDateString(
-      "en-US",
-      { 
-        year: "numeric",
-        month: "long",
-        day: "numeric"
-      }
-    )
-  };
 
   return {
     props: {
       content,
-      frontmatter
+      frontmatter: data
     }
   };
 };

@@ -1,10 +1,11 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { FunctionComponent } from "react";
 
 import NavBar from "../components/NavBar";
 import Card from "../components/project/Card";
 import { Project } from "../components/project/Card";
+import rssFeed from "../lib/rss";
 
 const About: FunctionComponent = () => {
   return (
@@ -32,17 +33,26 @@ const Profiles: FunctionComponent = () => {
     <div>
       <ul role="list" className="my-4 marker:text-blue-500 list-disc">
         <li>
-          <a href="https://www.github.com/theobori" className="text-blue-500 hover:underline underline-offset-4">
+          <a 
+            href="https://www.github.com/theobori"
+            className="text-blue-500 hover:underline underline-offset-4"
+          >
           GitHub
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/theo-bori/" className="text-blue-500 hover:underline underline-offset-4">
+          <a
+            href="https://www.linkedin.com/in/theo-bori/"
+            className="text-blue-500 hover:underline underline-offset-4"
+          >
           LinkedIn
           </a>
         </li>
         <li>
-          <a href="https://ctftime.org/user/67138/" className="text-blue-500 hover:underline underline-offset-4">
+          <a
+            href="https://ctftime.org/user/67138/"
+            className="text-blue-500 hover:underline underline-offset-4"
+          >
           CTFtime
           </a>
         </li>
@@ -157,6 +167,14 @@ const Home: NextPage = () => {
 
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  await rssFeed();
+
+  return {
+    props: {}
+  };
 };
 
 export default Home;
