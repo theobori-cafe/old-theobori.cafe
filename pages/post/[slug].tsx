@@ -7,7 +7,6 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 
-import NavBar from "../../components/NavBar";
 import { PostMetadata } from "../../lib/post";
 
 import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
@@ -19,6 +18,7 @@ import markdown from "react-syntax-highlighter/dist/cjs/languages/prism/markdown
 import json from "react-syntax-highlighter/dist/cjs/languages/prism/json";
 import rust from "react-syntax-highlighter/dist/cjs/languages/prism/rust";
 import asm6502 from "react-syntax-highlighter/dist/cjs/languages/prism/asm6502";
+import docker from "react-syntax-highlighter/dist/cjs/languages/prism/docker";
 
 import { coldarkDark as markdownTheme } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import PostPreview from "../../components/PostPreview";
@@ -32,6 +32,7 @@ SyntaxHighlighter.registerLanguage("markdown", markdown);
 SyntaxHighlighter.registerLanguage("json", json);
 SyntaxHighlighter.registerLanguage("rust", rust);
 SyntaxHighlighter.registerLanguage("asm", asm6502);
+SyntaxHighlighter.registerLanguage("docker", docker);
 
 type Props = {
   content: string,

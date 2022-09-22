@@ -2,7 +2,6 @@ import fs from "fs";
 import matter from "gray-matter";
 import type { GetStaticProps, NextPage } from "next";
 
-import NavBar from "../components/NavBar";
 import PostPreview from "../components/PostPreview";
 import { PostMetadata } from "../lib/post";
 

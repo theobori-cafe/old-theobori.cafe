@@ -1,7 +1,5 @@
 import { NextPage } from "next";
 
-import NavBar from "../components/NavBar";
-
 import styles from "../styles/Pgp.module.css";
 
 const MAIL_ADDRESS = "theo1.bori@epitech.eu";

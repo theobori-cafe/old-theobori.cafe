@@ -1,10 +1,6 @@
 import type { NextPage } from "next";
-import Link from "next/link";
-
-import NavBar from "../components/NavBar";
 
 import styles from "../styles/Pgp.module.css";
-
 
 const PgpPage: NextPage = () => {
   return (

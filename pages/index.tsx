@@ -2,7 +2,6 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { FunctionComponent } from "react";
 
-import NavBar from "../components/NavBar";
 import Card from "../components/project/Card";
 import { Project } from "../components/project/Card";
 import rssFeed from "../lib/rss";

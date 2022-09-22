@@ -4,9 +4,7 @@ import fs from "fs";
 import matter from "gray-matter";
 
 import PostPreview from "../../../components/PostPreview";
-
 import { PostMetadata } from "../../../lib/post";
-import NavBar from "../../../components/NavBar";
 
 type Props = {
   posts: PostMetadata[],
