@@ -59,8 +59,9 @@ const NavItems: FunctionComponent<NavItemsProps> = ({ items }) => {
 const NavBar: FunctionComponent = () => {
   const [emoji, setEmoji] = useState("👼");
 
-  useEffect(() => setEmoji(
-    getRandomEmojis()),
+  useEffect(() =>  {
+      setEmoji(getRandomEmojis());
+    },
     []
   );
 
@@ -71,7 +72,7 @@ const NavBar: FunctionComponent = () => {
           as="a"
           href="/"
           variant="small"
-          className="mr-4 py-1.5 text-2xl font-medium text-slate-500"
+          className="mr-4 py-1.5 text-2xl font-medium text-slate-500 hover:text-blue-400"
         >
           <span>{emoji + " Théo Bori"}</span>
         </Typography>
