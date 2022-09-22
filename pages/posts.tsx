@@ -18,19 +18,15 @@ type Props = {
 const PostsPage: NextPage<Props> = ({ posts }) => {
   return (
     <div>
-      <NavBar />
-
-      <div className="mx-auto max-w-[40%]">
-        {posts.map(({ frontmatter, slug }) => (
-          <div key={frontmatter.title} className="my-4">
+      {posts.map(({ frontmatter, slug }) => (
+          <div key={frontmatter.title} className="my-8">
             <PostPreview
               key={frontmatter.title}
               frontmatter={frontmatter}
               slug={slug}
             />
           </div>
-        ))}
-      </div>
+      ))}
     </div>
   );
 };

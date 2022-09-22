@@ -50,7 +50,9 @@ const PostPreview: FunctionComponent<PostPreviewProps> = ({ frontmatter, slug })
       </header>
   
       <section>
-        <p>{frontmatter.description}</p>
+        <p>
+          {frontmatter.description}
+        </p>
       </section>
     </article>
   );

@@ -1,6 +1,10 @@
 import { Navbar, Typography } from "@material-tailwind/react";
 import Link from "next/link";
 import { FunctionComponent } from "react";
+import { useEffect, useState } from "react";
+
+
+import getRandomEmojis from "../lib/randomEmojis";
 
 type NavItem = {
   href: string,
@@ -53,6 +57,13 @@ const NavItems: FunctionComponent<NavItemsProps> = ({ items }) => {
 };
 
 const NavBar: FunctionComponent = () => {
+  const [emoji, setEmoji] = useState("👼");
+
+  useEffect(() => setEmoji(
+    getRandomEmojis()),
+    []
+  );
+
   return (
     <Navbar className="mx-auto max-w-[40%] mb-8 py-2 lg:py-4">
       <div className="container mx-auto flex items-center justify-between">
@@ -62,7 +73,7 @@ const NavBar: FunctionComponent = () => {
           variant="small"
           className="mr-4 py-1.5 text-2xl font-medium text-slate-500"
         >
-          <span>Théo Bori</span>
+          <span>{emoji + " Théo Bori"}</span>
         </Typography>
         <NavItems items={NAV_ITEMS} />
       </div>

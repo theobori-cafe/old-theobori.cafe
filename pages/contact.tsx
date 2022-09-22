@@ -11,7 +11,7 @@ const ContactPage: NextPage = () => {
     <div>
       <NavBar />
 
-      <div className="mx-auto max-w-[40%]">
+      <div>
         <div className="text-2xl font-bold">
           Contact
         </div>

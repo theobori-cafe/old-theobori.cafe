@@ -144,10 +144,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <NavBar />
-
-      <div className="mx-auto max-w-[40%]">
-
+      <div>
         <div id="about" className="text-2xl font-bold">
           💬 About
         </div>

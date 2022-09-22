@@ -16,25 +16,20 @@ type Props = {
 const CategoryPage: NextPage<Props> = ({ posts, category }) => {
   return (
     <div>
-      <NavBar />
-
-      <div className="mx-auto max-w-[40%]">
-        <div className="text-2xl font-bold my-4 text-blue-500">
-          {category.charAt(0).toUpperCase() + category.slice(1)}
-        </div>
-        {
-          posts.map(post => {
-            return (
-              <PostPreview 
-                key={post.title}
-                frontmatter={post}
-                slug={post.slug as string}
-              />
-            );
-          })
-        }
+      <div className="text-2xl font-bold my-4 text-blue-500">
+        {category.charAt(0).toUpperCase() + category.slice(1)}
       </div>
-
+      {
+        posts.map(post => {
+          return (
+            <PostPreview 
+              key={post.title}
+              frontmatter={post}
+              slug={post.slug as string}
+            />
+          );
+        })
+      }
     </div>
   );
 };

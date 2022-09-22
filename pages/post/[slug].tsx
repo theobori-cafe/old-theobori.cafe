@@ -17,8 +17,11 @@ import scss from "react-syntax-highlighter/dist/cjs/languages/prism/scss";
 import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
 import markdown from "react-syntax-highlighter/dist/cjs/languages/prism/markdown";
 import json from "react-syntax-highlighter/dist/cjs/languages/prism/json";
+import rust from "react-syntax-highlighter/dist/cjs/languages/prism/rust";
+import asm6502 from "react-syntax-highlighter/dist/cjs/languages/prism/asm6502";
 
-import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { coldarkDark as markdownTheme } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import PostPreview from "../../components/PostPreview";
 
 SyntaxHighlighter.registerLanguage("tsx", tsx);
 SyntaxHighlighter.registerLanguage("jsx", jsx);
@@ -27,6 +30,8 @@ SyntaxHighlighter.registerLanguage("scss", scss);
 SyntaxHighlighter.registerLanguage("bash", bash);
 SyntaxHighlighter.registerLanguage("markdown", markdown);
 SyntaxHighlighter.registerLanguage("json", json);
+SyntaxHighlighter.registerLanguage("rust", rust);
+SyntaxHighlighter.registerLanguage("asm", asm6502);
 
 type Props = {
   content: string,
@@ -49,7 +54,7 @@ const markdownComponents: object = {
 
     return (
       <SyntaxHighlighter
-        style={materialDark}
+        style={markdownTheme}
         PreTag="div"
         language={match ? match[1] : "bash"}
         // eslint-disable-next-line react/no-children-prop
@@ -63,25 +68,17 @@ const markdownComponents: object = {
 const PostPage: NextPage<Props> = ({ content, frontmatter }) => {
   return (
     <article>
-      <NavBar />
+      <PostPreview
+        frontmatter={frontmatter}
+        slug={frontmatter.slug as string}
+      />
 
-      <div className="mx-auto max-w-[40%]">
-
-        <div className="text-2xl font-bold text-blue-500">
-          {frontmatter.title}
-        </div>
-
-        <div className="text-sm italic text-slate-500">
-          {frontmatter.updatedAt}
-        </div>
-    
-        <ReactMarkdown 
-          components={markdownComponents}
-          className="text-xs"
-        >
-          {content}
-        </ReactMarkdown>
-      </div>
+      <ReactMarkdown 
+        className="my-8"
+        components={markdownComponents}
+      >
+        {content}
+      </ReactMarkdown>
     </article>
   );
 };
@@ -117,6 +114,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     .toString();
 
   const { data, content } = matter(post);
+
+  data.slug = slug as string;
 
   return {
     props: {
