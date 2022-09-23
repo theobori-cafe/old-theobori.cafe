@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react";
 
 import NavBar from "./NavBar";
+// import Footer from "./Footer";
 
 type Props = {
   children: any
@@ -9,8 +10,15 @@ type Props = {
 const Layout: FunctionComponent<Props> = ({ children }) => {
   return (
       <div>
-        <NavBar />
+        <header>
+          <NavBar />
+        </header>
+        
         {children}
+
+        {/* <footer>
+          <Footer />
+        </footer> */}
       </div>
   );
 };

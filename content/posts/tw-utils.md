@@ -1,10 +1,16 @@
 ---
 title: Teeworlds Utilities
-description: Writing in progress
-updatedAt: "2022-09-22"
+description: Collection of Teeworlds utilities, Rust / TS library, REST API, Discord bot, etc...
+
+updatedAt: "2022-09-?"
 categories: [
   "TypeScript",
-  "Teeworlds"
+  "Rust",
+  "Teeworlds",
+  "Api",
+  "Discord"
 ]
 author: "Théo Bori"
 ---
+
+Writing in progress

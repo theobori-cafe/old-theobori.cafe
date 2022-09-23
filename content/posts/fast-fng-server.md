@@ -1,6 +1,6 @@
 ---
 title: Teeworlds FNG server
-description: Fast deployment of a teeworlds fng server using Docker
+description: Fast deployment of a teeworlds fng server using Docker.
 updatedAt: "2022-09-23"
 categories: [
   "Teeworlds",
@@ -49,7 +49,7 @@ ENTRYPOINT [ "sh", "start.sh" ]
 The server is compatible with **0.6** and **0.7** Teeworlds version.
 By default, it uses **`fng.cfg`** as configuration file.
 
-The **UDP** port opened on the container will be the value of sv_port in this file.
+The **UDP** port opened on the container will be the value of **`sv_port`** in this file.
 
 *[Source](https://github.com/theobori/teeworlds-fng2-docker)*
 
