@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FunctionComponent } from "react";
 
-import { PostMetadata } from "../lib/post";
+import { PostData } from "../lib/posts";
 
 type PostCategoryProps = {
   categories: string[]
@@ -28,30 +28,29 @@ const PostCategories: FunctionComponent<PostCategoryProps> = ({ categories }) =>
 };
 
 type PostPreviewProps = {
-  frontmatter: PostMetadata,
-  slug: string
+  post: PostData
 };
 
-const PostPreview: FunctionComponent<PostPreviewProps> = ({ frontmatter, slug }) => {
+const PostPreview: FunctionComponent<PostPreviewProps> = ({ post }) => {
   return (
-    <article key={slug}>
+    <article key={post.slug}>
       <header>
-        <Link href={"/post/[slug]"} as={`/post/${slug}`}>
+        <Link href={"/post/[slug]"} as={`/post/${post.slug}`}>
           <a className="text-2xl font-bold text-slate-900 hover:underline underline-offset-4">
-            {frontmatter.title}
+            {post.title}
           </a>
         </Link>
   
         <div className="text-sm italic text-slate-500">
-          {frontmatter.updatedAt}
+          {post.updatedAt}
         </div>
 
-        <PostCategories categories={frontmatter.categories} />
+        <PostCategories categories={post.categories} />
       </header>
   
       <section>
         <p>
-          {frontmatter.description}
+          {post.description}
         </p>
       </section>
     </article>

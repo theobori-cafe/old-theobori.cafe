@@ -1,36 +1,40 @@
 import fs from "fs";
 import matter from "gray-matter";
 
-export type PostMetadata = {
-  slug?: string,
-  title: string,
-  description: string,
-  updatedAt: string,
-  categories : string[],
-  author :string
-};
-  
-export type PostData = PostMetadata & {
-  content: string
-};
+import { PostData } from "./posts";
 
-function getPosts(): PostData[] {
-  const files = fs.readdirSync("content/posts");
-  const posts = files.map(filename => {
+class Post {
+  data: PostData;
+
+  private path: string;
+
+  constructor(path: string) {
+    this.data = {} as PostData;
+
+    this.path = path;
+  }
+
+  get(path?: string): PostData {
+    path = path || this.path;
     const post = fs
-      .readFileSync("content/posts/" + filename)
+      .readFileSync(path)
       .toString();
-  
+
+    const name = path
+      .split("/")
+      .slice(-1)[0]
+      .split(".")[0];
+
     const { data, content } = matter(post);
-
-    return {
+    const pData = {
       ...data,
-      slug: filename.replace(".md", ""),
+      slug: name,
       content
-    };
-  });
+    } as PostData;
 
-  return posts as PostData[];
+
+    return pData;
+  };
 }
 
-export default getPosts;
+export default Post;

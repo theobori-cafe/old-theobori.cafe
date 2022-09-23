@@ -101,7 +101,7 @@ def fill_min(*args: Tuple[List[Any]]) -> List[Any]:
 ```python
 from typing import List, Any
 
-def make_groups(arr: List[Any], size: int) -> List[Any]:
+def make_groups(arr: List[Any], size: int) -> List[List[Any]]:
     """
         Makes list of iterable with a constant size
     """

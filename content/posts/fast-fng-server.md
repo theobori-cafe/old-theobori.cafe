@@ -58,11 +58,11 @@ For help
 python3 run.py -h
 ```
 
-1. If you never build, run:
+If you never build, run:
 ```
 python3 run.py build image_name
 ```
-1. Else you can directly execute the script with **`run`** as action
+Else you can directly execute the script with **`run`** as action
 ```
 python3 run.py run image_name
 ```

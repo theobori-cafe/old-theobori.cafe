@@ -1,9 +1,12 @@
 import fs from "fs";
 import { Feed } from "feed";
-import getPosts from "./post";
+import Posts from "./posts";
 
 async function rssFeed() {
-  const posts = getPosts();
+  const posts = new Posts()
+    .fetchPosts()
+    .getPosts();
+
   const siteURL = process.env.VERCEL_URL;
   const date = new Date();
   const author = {

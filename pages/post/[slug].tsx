@@ -1,13 +1,11 @@
 import React from "react";
 import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 
-import { PostMetadata } from "../../lib/post";
+import { PostData } from "../../lib/posts";
 
 import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
 import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
@@ -19,9 +17,11 @@ import json from "react-syntax-highlighter/dist/cjs/languages/prism/json";
 import rust from "react-syntax-highlighter/dist/cjs/languages/prism/rust";
 import asm6502 from "react-syntax-highlighter/dist/cjs/languages/prism/asm6502";
 import docker from "react-syntax-highlighter/dist/cjs/languages/prism/docker";
+import python from "react-syntax-highlighter/dist/cjs/languages/prism/python";
 
 import { coldarkDark as markdownTheme } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import PostPreview from "../../components/PostPreview";
+import Post from "../../lib/post";
 
 SyntaxHighlighter.registerLanguage("tsx", tsx);
 SyntaxHighlighter.registerLanguage("jsx", jsx);
@@ -33,10 +33,10 @@ SyntaxHighlighter.registerLanguage("json", json);
 SyntaxHighlighter.registerLanguage("rust", rust);
 SyntaxHighlighter.registerLanguage("asm", asm6502);
 SyntaxHighlighter.registerLanguage("docker", docker);
+SyntaxHighlighter.registerLanguage("python", python);
 
 type Props = {
-  content: string,
-  frontmatter: PostMetadata
+  post: PostData
 };
 
 const markdownComponents: object = {
@@ -66,19 +66,16 @@ const markdownComponents: object = {
   }
 };
 
-const PostPage: NextPage<Props> = ({ content, frontmatter }) => {
+const PostPage: NextPage<Props> = ({ post }) => {
   return (
     <article>
-      <PostPreview
-        frontmatter={frontmatter}
-        slug={frontmatter.slug as string}
-      />
+      <PostPreview post={post} />
 
       <ReactMarkdown 
         className="my-8"
         components={markdownComponents}
       >
-        {content}
+        {post.content}
       </ReactMarkdown>
     </article>
   );
@@ -109,19 +106,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
   // Get parameters
   const { slug } = context.params as IParams;
 
-  const postPath = path.join("content/posts", `${slug}.md`);
-  const post = fs
-    .readFileSync(postPath)
-    .toString();
-
-  const { data, content } = matter(post);
-
-  data.slug = slug as string;
+  const post = new Post("content/posts/" + slug + ".md").get();
 
   return {
     props: {
-      content,
-      frontmatter: data
+      post
     }
   };
 };

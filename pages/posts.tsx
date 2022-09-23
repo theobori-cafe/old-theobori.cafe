@@ -1,28 +1,20 @@
-import fs from "fs";
-import matter from "gray-matter";
 import type { GetStaticProps, NextPage } from "next";
 
 import PostPreview from "../components/PostPreview";
-import { PostMetadata } from "../lib/post";
-
-type Post = {
-  slug: string,
-  frontmatter: PostMetadata
-};
+import Posts, { PostData } from "../lib/posts";
 
 type Props = {
-  posts: Post[];
+  posts: PostData[];
 };
 
 const PostsPage: NextPage<Props> = ({ posts }) => {
   return (
     <div>
-      {posts.map(({ frontmatter, slug }) => (
-          <div key={frontmatter.title} className="my-8">
+      {posts.map(post => (
+          <div key={post.title} className="my-8">
             <PostPreview
-              key={frontmatter.title}
-              frontmatter={frontmatter}
-              slug={slug}
+              key={post.title}
+              post={post}
             />
           </div>
       ))}
@@ -31,21 +23,11 @@ const PostsPage: NextPage<Props> = ({ posts }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const dirPath = "content/posts";
-  const files = fs.readdirSync(dirPath);
+  const posts = new Posts()
+    .fetchPosts()
+    .sortByDate()
+    .getPosts();
 
-  const posts = files.map(filename => {
-    const content = fs
-      .readFileSync(dirPath + "/" + filename)
-      .toString();
-    
-    const { data } = matter(content);
-
-    return {
-      slug: filename.replace(".md", ""),
-      frontmatter: data,
-    };
-  });
 
   return {
     props: {
