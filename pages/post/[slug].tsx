@@ -31,7 +31,7 @@ SyntaxHighlighter.registerLanguage("bash", bash);
 SyntaxHighlighter.registerLanguage("markdown", markdown);
 SyntaxHighlighter.registerLanguage("json", json);
 SyntaxHighlighter.registerLanguage("rust", rust);
-SyntaxHighlighter.registerLanguage("asm", asm6502);
+SyntaxHighlighter.registerLanguage("asm6502", asm6502);
 SyntaxHighlighter.registerLanguage("docker", docker);
 SyntaxHighlighter.registerLanguage("python", python);
 

@@ -109,7 +109,7 @@ The bytecodes are in the **PGR ROM** (**Program Read-Only Memory**) of size `0x4
 
 So, for **`Kirby's Adventure`**, the assembler code should looks like:
 
-```asm
+```asm6502
 ; Mapped registers
 
 SQ1_VOL equ $4000
