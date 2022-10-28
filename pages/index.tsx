@@ -17,7 +17,7 @@ const About: FunctionComponent = () => {
           ex CTF player
         </li>
         <li>
-          Love Linux, Rust & Python
+          Love Linux, Rust, Typescript & Python
         </li>
         <li>
           Maintaining <a href="https://skins.tw" className="text-blue-500 hover:underline underline-offset-4">skins.tw</a>
@@ -61,6 +61,11 @@ const Profiles: FunctionComponent = () => {
 };
 
 const PROJECTS = [
+  {
+    name: "tinychip",
+    description: "A CHIP-8 emulator in Rust",
+    url: "https://github.com/theobori/tinychip"
+  },
   {
     name: "NES Utilities",
     description: "Some utilities for the NES like disassembling, extracting CHR ROM graphics data, decoding Game Genie, etc..) in Rust",
