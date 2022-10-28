@@ -74,7 +74,7 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
 
   const posts = new Posts()
     .fetchPosts()
-    // .sortByDate()
+    .sortByDate()
     .getPosts();
   
 
