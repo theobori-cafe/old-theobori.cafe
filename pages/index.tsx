@@ -62,6 +62,16 @@ const Profiles: FunctionComponent = () => {
 
 const PROJECTS = [
   {
+    name: "self-config",
+    description: "Reproducible and easy to setup Linux environment",
+    url: "https://github.com/theobori/self-config"
+  },
+  {
+    name: "tinywad",
+    description: "WAD file lump(s) extractor in Rust",
+    url: "https://github.com/theobori/tinywad"
+  },
+  {
     name: "tinychip",
     description: "A CHIP-8 emulator in Rust",
     url: "https://github.com/theobori/tinychip"
