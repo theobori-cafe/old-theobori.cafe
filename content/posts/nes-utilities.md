@@ -9,7 +9,7 @@ categories: [
 author: "Théo Bori"
 ---
 
-# Introduction
+# ~
 
 I wanted to learn more about how the NES works, so I consulted the resources on [Nesdev Wiki](https://www.nesdev.org/wiki/Nesdev_Wiki) and I discovered that from an NES program (`.nes` file) you could do cool stuff like extracting some tilesets from the **CHR ROM** (**Character Read-Only Memory**) or a **PRNG** (**Pseudorandom Number Generator**) with the instructions interpreted by the NES.
 
@@ -54,7 +54,6 @@ So, let's take the example of **`Kirby's Adventure`**, below are the graphical d
 
 There are only four colors because the rest is calculated at runtime.
 Below are the main parts of code that generate this 2 images:
-
 
 ### Colors
 ```rust
@@ -164,7 +163,3 @@ Address 0x1e05
 Value 0xad
 Compare value 0x8d
 ```
-
-# Conclusion
-
-I learned a lot of things about how the NES works and it was quite interesting.

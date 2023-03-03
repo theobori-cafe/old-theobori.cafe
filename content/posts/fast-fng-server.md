@@ -10,7 +10,7 @@ categories: [
 author: "Théo Bori"
 ---
 
-# Introduction
+# ~
 
 <p align="center" width="100%">
   <img src="/ddnet_logo.png">
@@ -83,6 +83,3 @@ Else you can directly execute the script with **`run`** as action
 ```
 python3 run.py run image_name
 ```
-
-# Conclusion
-It is now very simple to deploy a Teeworlds FNG server.

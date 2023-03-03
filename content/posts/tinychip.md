@@ -9,7 +9,7 @@ categories: [
 author: "Théo Bori"
 ---
 
-# Introduction
+# ~
 
 I wanted to learn the basics of emulator development and emulation in general. So I decided to make a chip8 emulator.
 In fact it's a misuse of language to say that it's an "emulator" because chip8 is a language, so we should rather say "interpreter".
@@ -46,7 +46,3 @@ I implemented the 36 instructions + the 4 I was taking before to be compatible w
 # Try
 
 [*Source*](https://github.com/theobori/tinychip)
-
-# Conclusion
-
-It was an interesting project and the result is pretty cool.

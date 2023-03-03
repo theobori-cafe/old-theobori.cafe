@@ -8,7 +8,7 @@ categories: [
 author: "Théo Bori"
 ---
 
-# Introduction
+# ~
 
 Here are some pieces of code that I have done in Python and that I use quite often in my projects.
 
@@ -192,7 +192,3 @@ class Binds:
 
         return await bind.try_call(*add_args, **add_kwargs)
 ```
-
-# Conclusion
-
-Most of what I propose is generalized so I could re-use it easily.

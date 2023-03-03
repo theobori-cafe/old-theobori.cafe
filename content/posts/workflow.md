@@ -6,12 +6,13 @@ categories: [
   "Linux",
   "i3wm",
   "X",
-  "Ansible"
+  "Ansible",
+  "Suckless"
 ]
 author: "Théo Bori"
 ---
 
-# Introduction
+# ~
 
 I've been using only Linux for years now, I've almost always used GNOME and even i3 but without any real configuration effort. Now I have a working environment that I find very practical and that allows me to be fast and more comfortable.
 
@@ -72,7 +73,3 @@ The Nix installation assumes that SELinux is disabled, because Nix has made its 
 </p>
 
 *Source: [Repository](https://github.com/theobori/self-config)*
-
-# Conclusion
-
-Creating your own environment can be time consuming but in the end you will save time and it is much more comfortable.
