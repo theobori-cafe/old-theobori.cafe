@@ -1,8 +1,17 @@
 .code {
   background: #f5f5f5;
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 0.25rem;
   font-size: 1.0rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
+}
+  
+.rawcode {
+  background: #00000000;
+  padding: 0.25rem;
+  font-size: 1.0rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+  white-space: pre-wrap;
 }

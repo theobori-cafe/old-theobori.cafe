@@ -17,14 +17,17 @@ I've been using only Linux for years now, I've almost always used GNOME and even
 
 # Overview
 
-![Workflow](/workflow.png)
+<p align="center" width="100%">
+  <img src="/workflow.png">
+</p>
 
 # Theme: `Dracula`
 
-![Dracula](/dracula_logo.png)
+<p align="center" width="100%">
+  <img src="/dracula_logo.png">
+</p>
 
 I have used the Dracula theme for almost every applications.
-
 
 # Environment
 
@@ -40,7 +43,7 @@ I won't list every single software I use, but only my most frequently used and i
 
 **`wezterm`**: GPU-accelerated cross-platform terminal emulator and multiplexer, implemented in Rust
 
-**`tmux`**: Terminal multiplxer
+**`tmux`**: Terminal multiplexer
 
 **`fish`**: Unix shell
 
@@ -51,6 +54,7 @@ I won't list every single software I use, but only my most frequently used and i
   - `fish_logo`
 
 **`nix`**: Cross platform packager manager
+
 **`feh`**: Image viewer, used to set the wallpaper
 
 **`flameshot`**: Screenshot software
@@ -63,7 +67,9 @@ I have made an automatic installation with Ansible for a faster, easier and more
 
 The Nix installation assumes that SELinux is disabled, because Nix has made its own security system.
 
-![Nix security](/nix_security.png)
+<p align="center" width="100%">
+  <img src="/nix_security.png">
+</p>
 
 *Source: [Repository](https://github.com/theobori/self-config)*
 

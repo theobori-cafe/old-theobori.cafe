@@ -19,6 +19,7 @@
     "react-markdown": "^8.0.3",
     "react-syntax-highlighter": "^15.5.0",
     "react-typography": "^0.16.23",
+    "rehype-raw": "^6.1.1",
     "typography": "^0.16.21"
   },
   "devDependencies": {

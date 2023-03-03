@@ -47,8 +47,10 @@ There are not all the tilesets of the game in the CHR, you can find `0x2000 * le
 
 So, let's take the example of **`Kirby's Adventure`**, below are the graphical data of the CHR rom:
 
-![First bank](/kirby1.png)
-![Second bank](/kirby2.png)
+<p align="center" width="100%">
+  <img src="/kirby1.png">
+  <img src="/kirby2.png">
+</p>
 
 There are only four colors because the rest is calculated at runtime.
 Below are the main parts of code that generate this 2 images:
@@ -59,7 +61,6 @@ Below are the main parts of code that generate this 2 images:
 type Rgb = (u8, u8, u8);
 
 const BLACK_PIXEL: Rgb = (0, 0, 0);
-
 const COLOR_SCHEME: [Rgb; 4] = [
     (0, 0, 0),
     (126, 126, 126),

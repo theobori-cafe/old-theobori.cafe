@@ -3,7 +3,6 @@ import Link from "next/link";
 import { FunctionComponent } from "react";
 import { useEffect, useState } from "react";
 
-
 import getRandomEmojis from "../lib/randomEmojis";
 
 type NavItem = {
@@ -17,10 +16,6 @@ type NavItemsProps = {
 
 const NAV_ITEMS = [
   {
-    href: "/",
-    name: "Home"
-  },
-  {
     href: "/pgp",
     name: "PGP"
   },
@@ -29,12 +24,12 @@ const NAV_ITEMS = [
     name: "Posts"
   },
   {
-    href: "/rss/feed.xml",
-    name: "RSS"
+    href: "/projects",
+    name: "Projects"
   },
   {
-    href: "/contact",
-    name: "Contact"
+    href: "/rss/feed.xml",
+    name: "Feed"
   }
 ];
 
@@ -66,7 +61,7 @@ const NavBar: FunctionComponent = () => {
   );
 
   return (
-    <Navbar className="mx-auto max-w-[40%] mb-8 py-2 lg:py-4">
+    <Navbar className="mx-auto max-w-[30%] mb-8 py-2 lg:py-4">
       <div className="container mx-auto flex items-center justify-between">
       <Typography
           as="a"

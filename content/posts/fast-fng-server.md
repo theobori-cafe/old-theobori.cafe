@@ -12,7 +12,9 @@ author: "Théo Bori"
 
 # Introduction
 
-![DDNet Logo](/ddnet_logo.png)
+<p align="center" width="100%">
+  <img src="/ddnet_logo.png">
+</p>
 
 I've been playing **Teeworlds / DDnet** since at least 2014 and my favorite mode to ever play was FNG. I wanted to be able to create a server quickly if needed, so I made a Docker image and some Python that deploys a server in one command line.
 
@@ -25,19 +27,34 @@ FROM alpine:latest
 ENV DIRNAME fng2
 
 # Install dependencies to build binaries
-RUN apk update && \
-	apk --update add --no-cache --virtual .build-dependencies git cmake make gcc g++ alpine-sdk \
-	sdl2 sdl2-dev python3 \
-    freeglut freeglut-dev glew-dev glm-dev && \
-    ln -sf python3 /usr/bin/python && \
-	apk --update --no-cache add build-base && \
-    git clone https://github.com/Jupeyy/teeworlds-fng2-mod.git --branch fng_06 $DIRNAME && \
-    cd $DIRNAME && \
-    mkdir build && \
-    cd build && \
-    cmake .. && \
-    make -j16 && \
-    cp -r * .. && cd ..
+RUN apk update && apk --update add --no-cache --virtual .build-dependencies git \
+  cmake \
+  make \
+  gcc \
+  g++ \
+  alpine-sdk \
+  sdl2 \
+  sdl2-dev \
+  python3 \
+  freeglut \
+  freeglut-dev \
+  glew-dev \
+  glm-dev
+
+# Symlink python
+RUN ln -sf python3 /usr/bin/python
+
+# Cloning the repository
+RUN apk --update --no-cache add build-base && \
+  git clone https://github.com/Jupeyy/teeworlds-fng2-mod.git --branch fng_06 $DIRNAME
+
+# Building
+RUN cd $DIRNAME && \
+  mkdir build && \
+  cd build && \
+  cmake .. && \
+  make -j16 && \
+  cp -r * .. && cd ..
 
 WORKDIR $DIRNAME
 

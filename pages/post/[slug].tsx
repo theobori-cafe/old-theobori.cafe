@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
+import rehypeRaw from "rehype-raw";
 
 import { PostData } from "../../lib/posts";
 
@@ -57,6 +58,7 @@ const markdownComponents: object = {
       <SyntaxHighlighter
         style={markdownTheme}
         PreTag="div"
+        className="text-sm"
         language={match ? match[1] : "bash"}
         // eslint-disable-next-line react/no-children-prop
         children={String(children).replace(/\n$/, "")}
@@ -72,8 +74,9 @@ const PostPage: NextPage<Props> = ({ post }) => {
       <PostPreview post={post} />
 
       <ReactMarkdown 
-        className="my-8"
+        className="my-3"
         components={markdownComponents}
+        rehypePlugins={[rehypeRaw]}
       >
         {post.content}
       </ReactMarkdown>
