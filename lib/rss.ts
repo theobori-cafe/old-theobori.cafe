@@ -5,6 +5,7 @@ import Posts from "./posts";
 async function rssFeed() {
   const posts = new Posts()
     .fetchPosts()
+    .sortByDate()
     .getPosts();
 
   const siteURL = process.env.VERCEL_URL;
@@ -32,6 +33,7 @@ async function rssFeed() {
     },
     author,
   });
+
 
   // Adding blogs to the rss feed
   for (const post of posts) {

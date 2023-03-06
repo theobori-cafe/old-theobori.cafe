@@ -49,6 +49,6 @@ export const getStaticProps: GetStaticProps = async () => {
       pgpContent
     }
   };
-}
+};
 
 export default PgpPage;

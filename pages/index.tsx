@@ -81,8 +81,8 @@ const Contact: FunctionComponent = () => {
 
       </ul>
     </>
-  )
-}
+  );
+};
 
 const Home: NextPage = () => {
   return (
