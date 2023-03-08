@@ -1,6 +1,6 @@
 ---
 title: Teeworlds FNG server
-description: Fast deployment of a teeworlds fng server using Docker.
+description: Archived - Fast deployment of a teeworlds fng server using Docker.
 updatedAt: "2022-09-23"
 categories: [
   "Teeworlds",
@@ -15,6 +15,8 @@ author: "Théo Bori"
 <p align="center" width="100%">
   <img src="/ddnet_logo.png">
 </p>
+
+⚠️ Archived - check <a href="/post/tw">Teeworlds CLI</a>
 
 I've been playing **Teeworlds / DDnet** since at least 2014 and my favorite mode to ever play was FNG. I wanted to be able to create a server quickly if needed, so I made a Docker image and some Python that deploys a server in one command line.
 

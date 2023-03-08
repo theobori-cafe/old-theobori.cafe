@@ -1,7 +1,7 @@
 ---
 title: tinychip
 description: A CHIP-8 emulator that is able to support multiple API(s) and interpreter(s) implementations, it also supports some quirks for load and shift instructions. Adjustable clock speed from 500hz to 2000hz.
-updatedAt: "2022-10-28"
+updatedAt: "2023-03-08"
 categories: [
   "Rust",
   "Emulator"
@@ -24,6 +24,18 @@ Depending of the CPU state, the window draw the VRAM throught the API.
 
 There are approximately ~n instructions executed per second for a frequency of n hz (n is 500 by default).
 And the sound and delay timers are managed with 60hz.
+
+# Screenshots
+
+
+<p align="center" width="100%">
+  <img src="/breakout_320_160.png">
+  <img src="/space_invaders_320_160.png">
+</p>
+
+<p align="center" width="100%">
+  <img src="/ibm_logo_640_320.png" width="640px" height="320px">
+</p>
 
 ### CPU
 
