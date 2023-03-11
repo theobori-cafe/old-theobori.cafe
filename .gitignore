@@ -37,3 +37,7 @@ next-env.d.ts
 
 public/rss
 package-lock.json
+
+*.gmi
+*.gph
+scripts/.certificates

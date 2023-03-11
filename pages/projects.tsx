@@ -52,9 +52,9 @@ const PROJECTS = [
     url: "https://github.com/theobori/RSA.jl"
   },
   {
-    name: "bot-template",
-    description: "A Discord bot template for Python",
-    url: "https://github.com/theobori/bot-template"
+    name: "This website",
+    description: "Source code for this website",
+    url: "https://github.com/theobori/website"
   },
   {
     name: "lindenmayer",

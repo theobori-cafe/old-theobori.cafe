@@ -13,7 +13,7 @@ const About: FunctionComponent = () => {
     <div>
       <ul role="list" className="my-4 list-disc">
         <li>
-          FOSS & pubnix enthoutiast (~.team, ~.pink)
+          FOSS & pubnix enthoutiast
         </li>
         <li>
           ex CTF player
@@ -84,6 +84,34 @@ const Contact: FunctionComponent = () => {
   );
 };
 
+const Protocols: FunctionComponent = () => {
+  return (
+    <>
+      <ul role="list" className="my-4 marker:text-blue-500 list-disc">
+  
+        <li>
+          <a
+              href="gemini://tilde.pink/~nagi"
+              className="text-blue-500 hover:underline underline-offset-4"
+            >
+            Gemini
+          </a>
+        </li>
+
+        {/* <li>
+          <a
+              href="gopher://tilde.pink:70/1/~nagi"
+              className="text-blue-500 hover:underline underline-offset-4"
+            >
+            Gopher
+          </a>
+        </li> */}
+
+      </ul>
+    </>
+  );
+};
+
 const Home: NextPage = () => {
   return (
     <div>
@@ -107,7 +135,12 @@ const Home: NextPage = () => {
         <div id="contact" className="text-2xl text-slate-900 font-bold">
         🧾 Contact
         </div>
-        <Contact/>
+        <Contact />
+
+        <div id="contact" className="text-2xl text-slate-900 font-bold">
+        📡 Other protocols
+        </div>
+        <Protocols />
 
       </div>
 
