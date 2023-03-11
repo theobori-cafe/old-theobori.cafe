@@ -1,0 +1,24 @@
+[h|self-config|URL:https://github.com/theobori/self-config|tilde.pink|70]
+Reproducible and easy to setup Linux environment,
+[h|tinywad|URL:https://github.com/theobori/tinywad|tilde.pink|70]
+WAD file lump(s) extractor in Rust,
+[h|tinychip|URL:https://github.com/theobori/tinychip|tilde.pink|70]
+A CHIP-8 emulator in Rust,
+[h|NES Utilities|URL:https://github.com/theobori/nes-utils|tilde.pink|70]
+Some utilities for the NES in Rust,
+[h|JackOS|URL:https://github.com/theobori/JackOS|tilde.pink|70]
+An experimental operating system,
+[h|Teeworlds utilities|URL:https://github.com/teeworlds-utilities|tilde.pink|70]
+Teeworlds graphic utilities for Typescript,
+[h|libasm|URL:https://github.com/theobori/libasm|tilde.pink|70]
+An x86 assembly library that implement some C functions,
+[h|turtle-svg|URL:https://github.com/theobori/turtle-svg|tilde.pink|70]
+A Rust headless version of the turtle graphics library that generate SVG,
+[h|RSA.jl|URL:https://github.com/theobori/RSA.jl|tilde.pink|70]
+Ported the RSA in Julia,
+[h|Website|URL:https://github.com/theobori/website|tilde.pink|70]
+Source code for the website,
+[h|lindenmayer|URL:https://github.com/theobori/lindermayer|tilde.pink|70]
+Rust L-System library with multiple graphic API that generate a SVG,
+
+[h|More projects|URL:https://github.com/theobori|tilde.pink|70]

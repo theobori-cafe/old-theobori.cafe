@@ -1,0 +1,32 @@
+# www
+## A simple list of interesting websites 
+###  pubnix - tilde - Suckless
+By Théo Bori, edited 2023-03-03
+# ~
+
+* 
+=> https://tilde.team tilde.team
+* 
+=> https://tilde.pink tilde.pink
+* 
+=> https://landchad.net landchad.net
+* 
+=> https://rawtext.club rawtext.club
+* 
+=> https://suckless.org suckless.org
+* 
+=> https://libreboot.org libreboot.org
+* 
+=> https://hashbang.sh hashbang.sh
+* 
+=> https://nostr.com nostr.com
+* 
+=> https://roadmap.sh roadmap.sh
+* 
+=> https://0x0.st 0x0.st
+* 
+=> https://anonfiles.com anonfiles.com
+* 
+=> https://syncthing.net syncthing.net
+* 
+=> https://wiby.me wiby.me

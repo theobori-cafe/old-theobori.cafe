@@ -1,0 +1,20 @@
+=> posts/tinychip.gmi tinychip
+> A CHIP-8 emulator that is able to support multiple API(s) and interpreter(s) implementations, it also supports some quirks for load and shift instructions. Adjustable clock speed from 500hz to 2000hz.
+
+=> posts/tw.gmi Teeworlds CLI
+> Teeworlds cli for a fast an easy server(s) deployment + client(s) - Repicable and dynamic.
+
+=> posts/websites.gmi www
+> A simple list of interesting websites 
+
+=> posts/workflow.gmi Linux environment workflow
+> A reproducible environment based on i3 and rofi.
+
+=> posts/fast-fng-server.gmi Teeworlds FNG server
+> Archived - Fast deployment of a teeworlds fng server using Docker.
+
+=> posts/python-useful.gmi Collection of useful Python stuff
+> Pieces of code that I made and that I use often and that I find useful.
+
+=> posts/nes-utilities.gmi NES library
+> The library contains useful features like a disassembler, graphic extraction (to PNG) from CHR ROM and a Game Genie encoder/decoder.

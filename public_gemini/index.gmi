@@ -1,0 +1,31 @@
+```
+  .-~~-.                         _
+,|`-__-'|    /\/|._ _  ___  ___ <_>
+||      |   |/\/ | ' |<_> |/ . || |
+`|      |        |_|_|<___|\_. ||_|
+  `-__-'                   <___'
+```
+
+
+=> pgp.gmi PGP
+=> posts.gmi Posts
+=> projects.gmi OSS projects
+
+# 💬 About
+* FOSS & pubnix enthoutiast
+* ex CTF player
+* Love Linux, Rust, Typescript & Python
+* Maintaining skins.tw
+
+# 🖇️ Profiles
+=>  https://www.github.com/theobori GitHub
+=>  https://www.linkedin.com/in/theo-bori/ LinkedIn
+=>  https://ctftime.org/user/67138/ CTFtime
+
+# 🧾 Contact
+* theo1.bori@epitech.eu
+* b0th#6474
+
+# 📡 Other protocols
+=> https://theobori.vercel.app HTTPS 
+=> gopher://tilde.pink:70/1/~nagi Gopher
