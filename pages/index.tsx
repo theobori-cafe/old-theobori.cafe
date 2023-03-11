@@ -98,14 +98,14 @@ const Protocols: FunctionComponent = () => {
           </a>
         </li>
 
-        {/* <li>
+        <li>
           <a
               href="gopher://tilde.pink:70/1/~nagi"
               className="text-blue-500 hover:underline underline-offset-4"
             >
             Gopher
           </a>
-        </li> */}
+        </li>
 
       </ul>
     </>

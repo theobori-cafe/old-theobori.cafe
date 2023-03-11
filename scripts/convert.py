@@ -44,7 +44,22 @@ METADATA_REGEXS = {
     )
 }
 
+AVAILABLES_LANG = (
+    "tsx",
+    "jsx",
+    "typescript",
+    "scss",
+    "bash",
+    "markdown",
+    "json",
+    "rust",
+    "asm6502",
+    "docker",
+    "python"
+)
+
 BLOCK_RE = "```%s[\\s\S]*?```"
+ALL_BLOCKS = BLOCK_RE % ("[" + "|".join(AVAILABLES_LANG) + "]")
 
 class PostMetadata:
     """
@@ -197,6 +212,8 @@ class GeminiConvert(PostConvert):
     def __init__(self):
         super().__init__(Document.GEMINI)
         
+        self.dest = ""
+        
     def parse(self):
         super().parse()
         
@@ -210,8 +227,6 @@ class GeminiConvert(PostConvert):
         for block in html_blocks:
             self.dest = self.dest.replace(block, "")
 
-        self.dest = self.dest.replace("**", "")
-        
         tmp = str(uuid4())
         self.dest = self.dest.replace("```", tmp)
         self.dest = self.dest.replace("`", "")
@@ -235,23 +250,102 @@ class GopherConvert(PostConvert):
         Convert into the gopher format
     """
     
+    HTTP_SOURCE_RE = re.compile(
+        rf"(\[.+\])(\(https:\/\/.+?\))",
+    )
+    P_RE = r"<p .+?>.+?<\/p>"
+    DEFAULT_HOSTPAGE = "tilde.pink"
+    DEFAULT_PORT = 70
+    
     def __init__(self):
         super().__init__(Document.GOPHER)
+        
+        self.dest = ""
     
+    def http_menu(
+        title: str,
+        url: str,
+        hostpage: str=DEFAULT_HOSTPAGE,
+        port: int=DEFAULT_PORT
+    ) -> str:
+        """
+            Generate an HTTP menu
+        """
+        
+        return "[h|" + title + "|" + "URL:" + \
+            url + "|" + hostpage + "|" + \
+            str(port) + "]"
+    
+    def __process_redirects(self):
+        """
+            Replace the redirects markdown tags
+            in the gopher way
+        """
+        
+        redirects = re.findall(
+            GopherConvert.HTTP_SOURCE_RE,
+            self.dest
+        )
+        
+        for title, url in redirects:
+            title_dest = title.replace("*", "")[1:-1]
+            url_dest = url[1:-1]
+            
+            http_menu = GopherConvert.http_menu(
+                title_dest,
+                url_dest
+            )
+            
+            redirect = title + url
+            self.dest = self.dest.replace(
+                redirect,
+                "\n" + http_menu + "\n"
+            )
+    
+    def __process_p_tags(self):
+        """
+            Replace the HTML <p></p>
+        """
+        
+        matchs = re.findall(
+            GopherConvert.P_RE,
+            self.dest,
+            re.MULTILINE | re.DOTALL
+        )
+        
+        for match in matchs:
+            self.dest = self.dest.replace(
+                match,
+                ""
+            )         
+        
     def parse(self):
         super().parse()
+        
+        self.dest = self.data
 
+        for block in AVAILABLES_LANG:
+            self.dest = self.dest.replace("```" + block, "")
+
+        self.dest = self.dest.replace("```", "")
+        
+        self.__process_redirects()
+        self.__process_p_tags()
+            
     def _metadata_dump(self):
         self.print(self._metadata.title)
         self.print(self._metadata.description)
         self.print(" - ".join(self._metadata.categories))
         self.print("By " + self._metadata.author) 
-        self.print("Last edit: " + self._metadata.updated_at)
-        self.print("---------------------")
+        
+        msg = "Last edit: " + self._metadata.updated_at
+        self.print(msg)
+        self.print("-" * len(msg))
     
     def dump(self):
         self._metadata_dump()
-
+        self.print(self.dest)
+        
 TO_CONVERT = {
     Document.GOPHER: GopherConvert,
     Document.GEMINI: GeminiConvert
@@ -288,7 +382,7 @@ class PostsConvert:
                     "w+"
                 )
                 
-                # converter.set_f(f)
+                converter.set_f(f)
                 converter.parse_and_dump()
 
 def main():

@@ -17,7 +17,7 @@ I wanted to learn more about how the NES works, so I consulted the resources on 
 
 I made an example binary that can run all the main features of the `nes-utils` library to make it more convenient to test.
 
-*[Source](https://github.com/theobori/nes-utils-cli)*
+[*Source*](https://github.com/theobori/nes-utils-cli)
 
 # Tilesets dumping
 

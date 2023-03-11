@@ -70,7 +70,7 @@ By default, it uses **`fng.cfg`** as configuration file.
 
 The **UDP** port opened on the container will be the value of **`sv_port`** in this file.
 
-*[Source](https://github.com/theobori/teeworlds-fng2-docker)*
+[*Source*](https://github.com/theobori/teeworlds-fng2-docker)
 
 For help
 ```

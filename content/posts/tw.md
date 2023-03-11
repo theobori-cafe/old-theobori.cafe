@@ -16,6 +16,6 @@ author: "Théo Bori"
 Just a better CLI than
 <a href="/post/fast-fng-server">Teeworlds FNG server</a>
 
-*[Source](https://github.com/theobori/tw)*
+[*Source*](https://github.com/theobori/tw)
 
 🚧 In construction...
