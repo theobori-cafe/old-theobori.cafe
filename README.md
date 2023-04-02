@@ -26,4 +26,4 @@ In `scripts` are some useful scripts like `convert.py` that convert markdown tex
 
 ## 📡 Other protocols
 
-The `Gemtext` version for `Gemini` has been test with the [Lagrande](https://github.com/skyjake/lagrange) client. For `Gopher` it works well with the [phfetch](https://github.com/xvxx/phetch) client.
+The `Gemtext` version for `Gemini` has been test with the [lagrange](https://github.com/skyjake/lagrange) client.  For `Gopher` it works well with the [phfetch](https://github.com/xvxx/phetch) client.
