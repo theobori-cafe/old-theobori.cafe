@@ -19,7 +19,10 @@ const About: FunctionComponent = () => {
           ex CTF player
         </li>
         <li>
-          Love Linux, Rust, Typescript & Python
+          Linux, Rust, x86 Assembly, Typescript & Python
+        </li>
+        <li>
+          SRE, DevOps, cloud & Hashicorp
         </li>
         <li>
           Maintaining <a href="https://skins.tw" className="text-blue-500 hover:underline underline-offset-4">skins.tw</a>
