@@ -7,14 +7,14 @@ import { FunctionComponent } from "react";
 
 const PROJECTS = [
   {
+    name: "tinywad",
+    description: "WAD library/composer in Rust",
+    url: "https://github.com/theobori/tinywad"
+  },
+  {
     name: "self-config",
     description: "Reproducible and easy to setup Linux environment",
     url: "https://github.com/theobori/self-config"
-  },
-  {
-    name: "tinywad",
-    description: "WAD file lump(s) extractor in Rust",
-    url: "https://github.com/theobori/tinywad"
   },
   {
     name: "tinychip",

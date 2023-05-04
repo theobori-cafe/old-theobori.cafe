@@ -4,7 +4,7 @@ description: A CHIP-8 emulator that is able to support multiple API(s) and inter
 updatedAt: "2023-03-08"
 categories: [
   "Rust",
-  "Emulator"
+  "Emulator",
 ]
 author: "Théo Bori"
 ---
