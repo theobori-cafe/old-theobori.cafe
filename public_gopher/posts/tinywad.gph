@@ -1,14 +1,10 @@
----
-title: tinywad
-description: A library for extracting, building, parsing and updating WAD files.
-updatedAt: "2023-05-03"
-categories: [
-  "Rust",
-  "DOOM",
-  "WAD"
-]
-author: "Théo Bori"
----
+tinywad
+A library for extracting, building, parsing and updating WAD files.
+Rust - DOOM - WAD
+By Théo Bori
+Last edit: 2023-05-03
+---------------------
+
 
 # ~
 
@@ -17,8 +13,12 @@ This project is a WAD library/manager, it can be used as a base for other WAD pr
 I have played around with some well known `IWAD` like **`doom.wad`** and **`doom2.wad`** (registered).
 
 To test the `IWAD`/`PWAD` generated, I have used two engines:
-- [GZDoom](https://zdoom.org/index) (tests + screenshots)
-- [WAD Commander](https://wadcmd.com/) (tests + preview in multiple contexts)
+- 
+[h|GZDoom|URL:https://zdoom.org/index|tilde.pink|70]
+ (tests + screenshots)
+- 
+[h|WAD Commander|URL:https://wadcmd.com/|tilde.pink|70]
+ (tests + preview in multiple contexts)
 
 # Use cases
 
@@ -26,7 +26,7 @@ Some use cases you could use in a DOOM modding context.
 
 ### IWAD patching
 
-```rust
+
 use tinywad::error::WadError;
 use tinywad::models::operation::WadOp;
 use tinywad::wad::Wad;
@@ -46,7 +46,7 @@ fn main() -> Result<(), WadError> {
 
     Ok(())
 }
-```
+
 
 So basically (above) it loads a first `IWAD` file, in our case it is **`doom2.wad`**. It borrows a lump (**`GATE3`**) into the variable **`gate`**, then we load a second `IWAD` which is **`doom1.wad`**, it selects desired lumps, then it update the selected lumps in `DOOM1` and finally overwrite the file.
 
@@ -56,7 +56,7 @@ So basically (above) it loads a first `IWAD` file, in our case it is **`doom2.wa
 
 ### Lumps extracting
 
-```rust
+
 use std::fs;
 
 use tinywad::dir::MAX_PAL;
@@ -82,31 +82,17 @@ fn main() -> Result<(), WadError> {
 
     Ok(())
 }
-```
+
 
 In this part of code, it extracts as PNG the selected lumps with different palettes (13).
 
 ### Extracted lumps (as PNGs)
 
-<p float="left">
-  <img src="/doom2/pal_0/BOSFB0.png">
-  <img src="/doom2/pal_1/BOSFB0.png">
-  <img src="/doom2/pal_2/BOSFB0.png">
-  <img src="/doom2/pal_3/BOSFB0.png">
-  <img src="/doom2/pal_4/BOSFB0.png">
-  <img src="/doom2/pal_5/BOSFB0.png">
-  <img src="/doom2/pal_6/BOSFB0.png">
-  <img src="/doom2/pal_7/BOSFB0.png">
-  <img src="/doom2/pal_8/BOSFB0.png">
-  <img src="/doom2/pal_9/BOSFB0.png">
-  <img src="/doom2/pal_10/BOSFB0.png">
-  <img src="/doom2/pal_11/BOSFB0.png">
-  <img src="/doom2/pal_12/BOSFB0.png">
-</p>
+
 
 ### Dumping metadata
 
-```rust
+
 use tinywad::error::WadError;
 use tinywad::models::operation::WadOp;
 use tinywad::wad::Wad;
@@ -119,11 +105,11 @@ fn main() -> Result<(), WadError> {
 
     Ok(())
 }
-```
+
 
 ### Output
 
-```
+
 Name: XXTIC, Size: 8, Offset: 12
 Name: STARTUP, Size: 153648, Offset: 20
 Name: PLAYPAL, Size: 21504, Offset: 153668, Palettes amount: 28
@@ -134,11 +120,11 @@ Name: TRANTBL0, Size: 256, Offset: 258116
 Name: TRANTBL1, Size: 256, Offset: 258372
 Name: TRANTBL2, Size: 256, Offset: 258628
 ...
-```
+
 
 ### Building a PWAD from scratch
 
-```rust
+
 use tinywad::error::WadError;
 use tinywad::lump::{LumpAdd, LumpAddKind};
 use tinywad::models::operation::WadOp;
@@ -193,7 +179,7 @@ fn main() -> Result<(), WadError> {
 
     Ok(())
 }
-```
+
 
 To take the screenshot (below) **`doom1_patch.wad`** has been injected into GZDOOM with the `IWAD` **`doom.wad`** (registered).
 
@@ -209,4 +195,7 @@ To take the screenshot (below) **`doom1_patch.wad`** has been injected into GZDO
 
 # Try
 
-[*Source*](https://github.com/theobori/tinywad)
+
+[h|Source|URL:https://github.com/theobori/tinywad|tilde.pink|70]
+
+

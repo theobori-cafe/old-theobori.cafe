@@ -1,3 +1,6 @@
+=> posts/tinywad.gmi tinywad
+> A library for extracting, building, parsing and updating WAD files.
+
 => posts/tinychip.gmi tinychip
 > A CHIP-8 emulator that is able to support multiple API(s) and interpreter(s) implementations, it also supports some quirks for load and shift instructions. Adjustable clock speed from 500hz to 2000hz.
 
