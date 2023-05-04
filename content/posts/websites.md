@@ -1,7 +1,7 @@
 ---
 title: www
 description: A simple list of interesting websites 
-updatedAt: "2023-03-03"
+updatedAt: "2023-05-04"
 categories: [
   "pubnix",
   "tilde",
@@ -25,3 +25,4 @@ author: "Théo Bori"
 - [anonfiles.com](https://anonfiles.com)
 - [syncthing.net](https://syncthing.net)
 - [wiby.me](https://wiby.me)
+- [ʞ.cc](https://xn--rpa.cc/)
