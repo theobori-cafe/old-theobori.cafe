@@ -27,9 +27,9 @@ const PROJECTS = [
     url: "https://github.com/theobori/nes-utils"
   },
   {
-    name: "JackOS",
+    name: "TacOS",
     description: "An experimental operating system",
-    url: "https://github.com/theobori/JackOS"
+    url: "https://github.com/epi-osdev/TacOS"
   },
   {
     name: "Teeworlds utilities",
@@ -38,7 +38,7 @@ const PROJECTS = [
   },
   {
     name: "libasm",
-    description: "An x86 assembly library that implement some C functions",
+    description: "An x86 assembly library that implement libC functions",
     url: "https://github.com/theobori/libasm"
   },
   {

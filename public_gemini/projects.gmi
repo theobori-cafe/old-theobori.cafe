@@ -1,17 +1,17 @@
 => https://github.com/theobori/self-config self-config
 Reproducible and easy to setup Linux environment,
-=> https://github.com/theobori/tinywad tinywad
+=> https://github.com/theobori/tinywad DOOM modding
 WAD file lump(s) extractor in Rust,
-=> https://github.com/theobori/tinychip tinychip
+=> https://github.com/theobori/tinychip CHIP-8 emulator
 A CHIP-8 emulator in Rust,
 => https://github.com/theobori/nes-utils NES Utilities
 Some utilities for the NES in Rust,
-=> https://github.com/theobori/JackOS JackOS
+=> https://github.com/epi-osdev/TacOS TacOS
 An experimental operating system,
 => https://github.com/teeworlds-utilities Teeworlds utilities
 Teeworlds graphic utilities for Typescript,
 => https://github.com/theobori/libasm libasm
-An x86 assembly library that implement some C functions,
+An x86 assembly library that implement libC functions,
 => https://github.com/theobori/turtle-svg turtle-svg
 A Rust headless version of the turtle graphics library that generate SVG,
 => https://github.com/theobori/RSA.jl RSA.jl

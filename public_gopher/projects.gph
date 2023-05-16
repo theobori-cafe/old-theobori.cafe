@@ -1,17 +1,17 @@
 [h|self-config|URL:https://github.com/theobori/self-config|tilde.pink|70]
 Reproducible and easy to setup Linux environment,
-[h|tinywad|URL:https://github.com/theobori/tinywad|tilde.pink|70]
+[h|DOOM modding|URL:https://github.com/theobori/tinywad|tilde.pink|70]
 WAD file lump(s) extractor in Rust,
-[h|tinychip|URL:https://github.com/theobori/tinychip|tilde.pink|70]
+[h|CHIP-8 emulator|URL:https://github.com/theobori/tinychip|tilde.pink|70]
 A CHIP-8 emulator in Rust,
 [h|NES Utilities|URL:https://github.com/theobori/nes-utils|tilde.pink|70]
 Some utilities for the NES in Rust,
-[h|JackOS|URL:https://github.com/theobori/JackOS|tilde.pink|70]
+[h|TacOS|URL:https://github.com/epi-osdev/TacOS|tilde.pink|70]
 An experimental operating system,
 [h|Teeworlds utilities|URL:https://github.com/teeworlds-utilities|tilde.pink|70]
 Teeworlds graphic utilities for Typescript,
 [h|libasm|URL:https://github.com/theobori/libasm|tilde.pink|70]
-An x86 assembly library that implement some C functions,
+An x86 assembly library that implement libC functions,
 [h|turtle-svg|URL:https://github.com/theobori/turtle-svg|tilde.pink|70]
 A Rust headless version of the turtle graphics library that generate SVG,
 [h|RSA.jl|URL:https://github.com/theobori/RSA.jl|tilde.pink|70]
