@@ -1,5 +1,5 @@
 ---
-title: tinywad
+title: DOOM modding
 description: A library for extracting, building, parsing and updating WAD files.
 updatedAt: "2023-05-03"
 categories: [

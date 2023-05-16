@@ -1,7 +1,7 @@
-=> posts/tinywad.gmi tinywad
+=> posts/tinywad.gmi DOOM modding
 > A library for extracting, building, parsing and updating WAD files.
 
-=> posts/tinychip.gmi tinychip
+=> posts/tinychip.gmi CHIP-8 emulator
 > A CHIP-8 emulator that is able to support multiple API(s) and interpreter(s) implementations, it also supports some quirks for load and shift instructions. Adjustable clock speed from 500hz to 2000hz.
 
 => posts/tw.gmi Teeworlds CLI

@@ -1,7 +1,7 @@
-[1|tinywad|/~nagi/posts/tinywad.gph|tilde.pink|70]
+[1|DOOM modding|/~nagi/posts/tinywad.gph|tilde.pink|70]
 A library for extracting, building, parsing and updating WAD files.
 
-[1|tinychip|/~nagi/posts/tinychip.gph|tilde.pink|70]
+[1|CHIP-8 emulator|/~nagi/posts/tinychip.gph|tilde.pink|70]
 A CHIP-8 emulator that is able to support multiple API(s) and interpreter(s) implementations, it also supports some quirks for load and shift instructions. Adjustable clock speed from 500hz to 2000hz.
 
 [1|Teeworlds CLI|/~nagi/posts/tw.gph|tilde.pink|70]

@@ -1,5 +1,5 @@
 ---
-title: tinychip
+title: CHIP-8 emulator
 description: A CHIP-8 emulator that is able to support multiple API(s) and interpreter(s) implementations, it also supports some quirks for load and shift instructions. Adjustable clock speed from 500hz to 2000hz.
 updatedAt: "2023-03-08"
 categories: [
