@@ -19,7 +19,7 @@ const About: FunctionComponent = () => {
           ex CTF player
         </li>
         <li>
-          Linux, Rust, x86 Assembly, Typescript & Python
+          Linux, Rust, Go, x86 Assembly & Python
         </li>
         <li>
           SRE, DevOps, cloud & Hashicorp

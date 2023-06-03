@@ -1,7 +1,7 @@
 ---
 title: www
 description: A simple list of interesting websites 
-updatedAt: "2023-05-04"
+updatedAt: "2023-03-08"
 categories: [
   "pubnix",
   "tilde",

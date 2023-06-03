@@ -7,6 +7,11 @@ import { FunctionComponent } from "react";
 
 const PROJECTS = [
   {
+    name: "terraform-provider-neuvector",
+    description: "A Terraform provider to configure NeuVector and manage its resources in Go",
+    url: "https://github.com/theobori/terraform-provider-neuvector"
+  },
+  {
     name: "tinywad",
     description: "WAD library/composer in Rust",
     url: "https://github.com/theobori/tinywad"

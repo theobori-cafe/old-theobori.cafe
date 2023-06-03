@@ -76,7 +76,12 @@ class Posts {
       return [];
     }
 
-    const files = fs.readdirSync(this.directory);
+    let files = fs.readdirSync(this.directory);
+
+    files = files.filter(
+      filename => filename.endsWith(".md")
+    );
+
     const posts = files.map(filename => {
       const path = this.directory + filename;
 
