@@ -20,7 +20,7 @@ A huge problem was the token that NeuVector provides tends to timeout quite quic
 So I decided to create a Terraform provider to handle all this cleanly. The language best suited for this is Go, so I learned it. Hashicorp explains that it's best to separate the client library from the provider.
 
 <p align="center" width="100%">
-    <img src="/terraform_workflow.png" width="80%">
+    <img src="/terraform_provider.png" width="90%">
 </p>
 
 So I created a Go SDK for NeuVector before using it in the provider, you can find it out [here](https://github.com/theobori/go-neuvector).
