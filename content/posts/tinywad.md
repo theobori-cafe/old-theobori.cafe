@@ -207,6 +207,35 @@ To take the screenshot (below) **`doom1_patch.wad`** has been injected into GZDO
 [`doom1_patch.asc`](/doom1_patch.asc)  
 [`checksum`](/checksum.txt)
 
+### Extracting MIDI lumps
+
+Extracting every musics from the `IWAD` **`doom.wad`**.
+
+```rust
+use tinywad::error::WadError;
+use tinywad::models::operation::WadOp;
+use tinywad::wad::{Wad};
+
+fn main() -> Result<(), WadError> {
+    let mut src = Wad::new();
+
+    src.load_from_file("doom.wad")?;
+    src.select("D_");
+    src.save_lumps(".");
+
+    Ok(())
+}
+```
+
+### `D_E1M1` converted from MIDI to MP3
+
+<figure>
+    <audio
+        controls
+        src="/D_E1M1.mp3">
+    </audio>
+</figure>
+
 # Try
 
 [*Source*](https://github.com/theobori/tinywad)
