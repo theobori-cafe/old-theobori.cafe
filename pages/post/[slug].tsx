@@ -23,6 +23,7 @@ import python from "react-syntax-highlighter/dist/cjs/languages/prism/python";
 import { coldarkDark as markdownTheme } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import PostPreview from "../../components/PostPreview";
 import Post from "../../lib/post";
+import Head from "next/head";
 
 SyntaxHighlighter.registerLanguage("tsx", tsx);
 SyntaxHighlighter.registerLanguage("jsx", jsx);
@@ -70,17 +71,25 @@ const markdownComponents: object = {
 
 const PostPage: NextPage<Props> = ({ post }) => {
   return (
-    <article>
-      <PostPreview post={post} />
+    <>
+      <Head>
+        <title>Théo Bori - Post - {post.title}</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
 
-      <ReactMarkdown 
-        className="my-3"
-        components={markdownComponents}
-        rehypePlugins={[rehypeRaw]}
-      >
-        {post.content}
-      </ReactMarkdown>
-    </article>
+      <article>
+        
+        <PostPreview post={post} />
+
+        <ReactMarkdown 
+          className="my-3"
+          components={markdownComponents}
+          rehypePlugins={[rehypeRaw]}
+          >
+          {post.content}
+        </ReactMarkdown>
+      </article>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 ---
 title: Terraform NeuVector provider
 description: A Terraform provider to configure NeuVector and manage its resources.
-updatedAt: "2023-07-03"
+updatedAt: "2023-06-04"
 categories: [
   "Terraform",
   "Go",

@@ -5,7 +5,8 @@ updatedAt: "2023-05-03"
 categories: [
   "Rust",
   "DOOM",
-  "WAD"
+  "WAD",
+  "Asset"
 ]
 author: "Théo Bori"
 ---

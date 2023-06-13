@@ -4,6 +4,7 @@ import Card from "../components/project/Card";
 import { Project } from "../components/project/Card";
 
 import { FunctionComponent } from "react";
+import Head from "next/head";
 
 const PROJECTS = [
   {
@@ -79,7 +80,12 @@ type Props = {
 
 const Projects: FunctionComponent<Props> = ({ projects }) => {
   return (
-    <div>
+    <>
+      <Head>
+        <title>Théo Bori - Projects</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+
       <ul role="list" className="my-4 marker:text-blue-500 list-disc">
         {
           projects.map(({ name, description, url}) => {
@@ -95,7 +101,7 @@ const Projects: FunctionComponent<Props> = ({ projects }) => {
           })
         }
       </ul>
-    </div>
+    </>
   );
 };
 

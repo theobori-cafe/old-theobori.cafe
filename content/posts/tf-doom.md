@@ -3,8 +3,8 @@ title: Terraform chaos engineering
 description: Destroy Terraform resource by killing DOOM enemies.
 updatedAt: "2023-06-03"
 categories: [
-  "Terraform",
   "Rust",
+  "Terraform",
   "DOOM",
 ]
 author: "Théo Bori"

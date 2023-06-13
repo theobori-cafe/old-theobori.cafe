@@ -2,6 +2,7 @@ import type { GetStaticProps, NextPage } from "next";
 import fs from "fs";
 
 import styles from "../styles/Pgp.module.css";
+import Head from "next/head";
 
 type Props = {
   pgpContent: string
@@ -9,7 +10,12 @@ type Props = {
 
 const PgpPage: NextPage<Props> = ({ pgpContent }) => {
   return (
-    <div>
+    <>
+      <Head>
+        <title>Théo Bori - PGP</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+
       <div className="text-2xl font-bold my-4">
         Fingerprint
       </div>
@@ -35,7 +41,7 @@ const PgpPage: NextPage<Props> = ({ pgpContent }) => {
         {pgpContent}
       </code>
 
-    </div>
+    </>
   );
 };
 

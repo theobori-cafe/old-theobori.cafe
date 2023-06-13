@@ -2,6 +2,7 @@ import type { GetStaticProps, NextPage } from "next";
 
 import PostPreview from "../components/PostPreview";
 import Posts, { PostData } from "../lib/posts";
+import Head from "next/head";
 
 type Props = {
   posts: PostData[];
@@ -9,7 +10,12 @@ type Props = {
 
 const PostsPage: NextPage<Props> = ({ posts }) => {
   return (
-    <div>
+    <>
+      <Head>
+        <title>Théo Bori - Posts</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+  
       {posts.map(post => (
           <div key={post.title} className="my-8">
             <PostPreview
@@ -18,7 +24,7 @@ const PostsPage: NextPage<Props> = ({ posts }) => {
             />
           </div>
       ))}
-    </div>
+    </>
   );
 };
 

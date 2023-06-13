@@ -3,6 +3,7 @@ import { ParsedUrlQuery } from "querystring";
 
 import PostPreview from "../../../components/PostPreview";
 import Posts, { PostData } from "../../../lib/posts";
+import Head from "next/head";
 
 type Props = {
   posts: PostData[],
@@ -11,7 +12,12 @@ type Props = {
 
 const CategoryPage: NextPage<Props> = ({ posts, category }) => {
   return (
-    <div>
+    <>
+      <Head>
+        <title>Théo Bori - Posts - {category}</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+
       <div className="text-2xl font-bold my-4 text-blue-500">
         {category.charAt(0).toUpperCase() + category.slice(1)}
       </div>
@@ -25,7 +31,7 @@ const CategoryPage: NextPage<Props> = ({ posts, category }) => {
           );
         })
       }
-    </div>
+    </>
   );
 };
 
@@ -72,12 +78,11 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
   
   let postsProps = [];
 
-  const posts = new Posts()
+  let posts = new Posts()
     .fetchPosts()
     .sortByDate()
     .getPosts();
   
-
   for (const post of posts) {
     const categories = post.categories.map(
       (c: string) => c.toLowerCase()
