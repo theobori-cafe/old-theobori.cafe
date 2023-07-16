@@ -1,7 +1,7 @@
 ---
 title: Teeworlds utilities
 description: Asset utilities including skin rendering, extracting, editing and many more for the Teeworlds community.
-updatedAt: "2023-06-12"
+updatedAt: "2023-07-16"
 categories: [
   "Teeworlds",
   "TypeScript",
@@ -150,6 +150,17 @@ try {
 <p align="center" width="100%">
   <img src="/render_new_skin.png">
   <img src="/new_skin.png">
+</p>
+
+# Other renders
+
+<p align="center" width="100%">
+  <img src="/skin_weapon.png">
+  <img src="/skin_weapon_color.png">
+</p>
+
+<p align="center" width="100%">
+  <img src="/board.png">
 </p>
 
 # Try
