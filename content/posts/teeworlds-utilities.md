@@ -1,7 +1,7 @@
 ---
 title: Teeworlds utilities
 description: Asset utilities including skin rendering, extracting, editing and many more for the Teeworlds community.
-updatedAt: "2023-07-16"
+updatedAt: "2023-07-26"
 categories: [
   "Teeworlds",
   "TypeScript",
@@ -41,7 +41,7 @@ import {
 const renderTest = async () => {
   const skin = new Skin();
 
-  await skin.loadFromUrl('https://api.skins.tw/database/skins/96AATxN3DEzcGww4QhmduFCsPzaxhZO7Tq6Lh9OI.png');
+  await skin.load('https://api.skins.tw/database/skins/96AATxN3DEzcGww4QhmduFCsPzaxhZO7Tq6Lh9OI.png');
 
   skin
     .render()
@@ -113,10 +113,10 @@ import {
 
 const mergeTest = async () => {
   const skin = new Skin();
-  await skin.loadFromUrl('https://api.skins.tw/database/skins/OUZsYUrmUkitNBUAtKyxdiH5EnLBTkBy8tKNPVmi.png');
+  await skin.load('https://api.skins.tw/database/skins/OUZsYUrmUkitNBUAtKyxdiH5EnLBTkBy8tKNPVmi.png');
 
   const skin_src = new Skin();
-  await skin_src.loadFromUrl('https://api.skins.tw/database/skins/6l7fEywyc0hnchjJAqEHVLmYVJIlNe2Cv6HJVNcR.png');
+  await skin_src.load('https://api.skins.tw/database/skins/6l7fEywyc0hnchjJAqEHVLmYVJIlNe2Cv6HJVNcR.png');
 
   skin
     .copyParts(
