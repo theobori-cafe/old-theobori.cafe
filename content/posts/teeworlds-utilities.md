@@ -14,7 +14,7 @@ author: "Théo Bori"
 
 This idea came to me when I was looking for a Teeworlds skin renderer.
 
-The ones that existed didn't suit me, as they didn't really respect the in-game rendering. Either the feet were too far out or the colors were wrong (see below).
+The ones that existed didn't suit me, as they didn't really respect the in-game rendering. Either the feet were too far out or the colors were wrong.
 
 So I decided to make my own toolbox to manipulate Teeworlds assets, which we use on skins.tw and for the Teeworlds Data Discord bot. 
 Indirectly, other people use it, for example, to render skins in a Discord channel that displays messages in real time (fokkonaut's Discord server)

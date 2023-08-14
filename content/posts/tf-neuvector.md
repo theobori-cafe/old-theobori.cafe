@@ -81,12 +81,12 @@ resource "neuvector_group" "group_test" {
   }
 }
 
-data "neuvector_group_services" "services_test" {
+data "neuvector_group_metadata" "group_metadata" {
     name = neuvector_group.group_test.id
 }
 
 resource "neuvector_service_config" "service_config_test" {
-  services = data.neuvector_group_services.services_test.services
+  services = data.neuvector_group_services.group_metadata.services
 
   not_scored = true
 }

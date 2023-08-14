@@ -5,7 +5,8 @@ updatedAt: "2023-03-08"
 categories: [
   "pubnix",
   "tilde",
-  "Suckless"
+  "Suckless",
+  "Blogs"
 ]
 author: "Théo Bori"
 ---
@@ -25,4 +26,9 @@ author: "Théo Bori"
 - [anonfiles.com](https://anonfiles.com)
 - [syncthing.net](https://syncthing.net)
 - [wiby.me](https://wiby.me)
-- [ʞ.cc](https://xn--rpa.cc/)
+- [ʞ.cc](https://xn--rpa.cc)
+- [cmpxchg8b.com](https://cmpxchg8b.com)
+- [xkcd.com](https://xkcd.com)
+- [swizec.com](https://swizec.com)
+- [thenewstack.io](https://thenewstack.io)
+- [sectordisk.pw](https://sectordisk.pw)
