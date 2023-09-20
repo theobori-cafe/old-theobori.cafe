@@ -1,4 +1,4 @@
-# 🧞 website
+# ☕ theobori.cafe
 
 ## ℹ️ About
 
